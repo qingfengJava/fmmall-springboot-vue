@@ -30,6 +30,7 @@ public class CheckTokenInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //放行OPTIONS请求
         String method = request.getMethod();
+        System.out.println(method);
         if ("OPTIONS".equalsIgnoreCase(method)){
             return true;
         }
