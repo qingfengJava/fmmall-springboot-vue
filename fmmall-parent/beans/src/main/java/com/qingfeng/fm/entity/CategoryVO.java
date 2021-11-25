@@ -1,13 +1,20 @@
 package com.qingfeng.fm.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import java.util.List;
 
 /**
- * 商品种类
+ * 封装用于查询商品类别信息的CategoryVo类
+ *
+ * 新增了一个集合
  *
  * @author 清风学Java
+ * @version 1.0.0
+ * @date 2021/11/25
  */
-public class Category {
+public class CategoryVO {
+
     /**
      * 主键 分类id主键
      */
@@ -23,9 +30,9 @@ public class Category {
 
     /**
      * 分类层级 分类得类型，
-1:一级大分类
-2:二级分类
-3:三级小分类
+     1:一级大分类
+     2:二级分类
+     3:三级小分类
      */
     @Column(name = "category_level")
     private Integer categoryLevel;
@@ -59,6 +66,19 @@ public class Category {
      */
     @Column(name = "category_bg_color")
     private String categoryBgColor;
+
+    /**
+     * 用于存放当前分类的子分类
+     */
+    private List<CategoryVO> categories;
+
+    public List<CategoryVO> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<CategoryVO> categories) {
+        this.categories = categories;
+    }
 
     /**
      * 获取主键 分类id主键
@@ -98,14 +118,14 @@ public class Category {
 
     /**
      * 获取分类层级 分类得类型，
-1:一级大分类
-2:二级分类
-3:三级小分类
+     1:一级大分类
+     2:二级分类
+     3:三级小分类
      *
      * @return category_level - 分类层级 分类得类型，
-1:一级大分类
-2:二级分类
-3:三级小分类
+    1:一级大分类
+    2:二级分类
+    3:三级小分类
      */
     public Integer getCategoryLevel() {
         return categoryLevel;
@@ -113,14 +133,14 @@ public class Category {
 
     /**
      * 设置分类层级 分类得类型，
-1:一级大分类
-2:二级分类
-3:三级小分类
+     1:一级大分类
+     2:二级分类
+     3:三级小分类
      *
      * @param categoryLevel 分类层级 分类得类型，
-1:一级大分类
-2:二级分类
-3:三级小分类
+    1:一级大分类
+    2:二级分类
+    3:三级小分类
      */
     public void setCategoryLevel(Integer categoryLevel) {
         this.categoryLevel = categoryLevel;
@@ -214,5 +234,19 @@ public class Category {
      */
     public void setCategoryBgColor(String categoryBgColor) {
         this.categoryBgColor = categoryBgColor;
+    }
+
+    @Override
+    public String toString() {
+        return "CategoryVO{" +
+                "categoryId=" + categoryId +
+                ", categoryName='" + categoryName + '\'' +
+                ", categoryLevel=" + categoryLevel +
+                ", parentId=" + parentId +
+                ", categoryIcon='" + categoryIcon + '\'' +
+                ", categorySlogan='" + categorySlogan + '\'' +
+                ", categoryPic='" + categoryPic + '\'' +
+                ", categoryBgColor='" + categoryBgColor + '\'' +
+                '}';
     }
 }

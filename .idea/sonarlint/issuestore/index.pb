@@ -225,12 +225,6 @@ h
 8.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml,a\2\a2c249d3925e2c040835368e8fe52698abc5188d
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
-u
-Efmmall-parent/api/src/test/java/com/qingfeng/ApiApplicationTests.java,2\8\283918821a1f3c3c4030651032842c8cea78cd23
-v
-Ffmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Category.java,b\a\ba998e6099f2dedb301f35383f38d1e60d5a4457
-z
-Jfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/CategoryMapper.java,1\c\1c86449ef0a9b017ed4a0b91ec8077d4dd5b1f2c
 }
 Mfmmall-parent/mapper/src/main/java/com/qingfeng/fm/generaldao/GeneralDao.java,4\6\46cb64ba2dae1e927b9d3b9143a646ee3fe06282
 v
@@ -313,3 +307,15 @@ Mfmmall-parent/api/src/main/java/com/qingfeng/fm/config/InterceptorConfig.java,
 Ufmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/UserServiceImpl.java,d\4\d46607e48988424a4e77afa1454890dad918a46f
 †
 Vfmmall-parent/api/src/main/java/com/qingfeng/fm/interceptor/CheckTokenInterceptor.java,0\5\056ed772a9af8ba72e51563be457ff16fc58df8a
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+€
+Pfmmall-parent/service/src/main/java/com/qingfeng/fm/service/IndexImgService.java,7\b\7bc6fcf996d5094b959ed682069e5099e5d8f14e
+‰
+Yfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/IndexImgServiceImpl.java,7\e\7e3288c4deb6189614375c06ecb2f96b6585bd66
+
+Ofmmall-parent/api/src/main/java/com/qingfeng/fm/controller/IndexController.java,c\4\c44a18aa627645bfdf06739dd145c4d614c836a1
+s
+Cfmmall-parent/api/src/main/java/com/qingfeng/fm/ApiApplication.java,c\4\c46190c95a52793cb6076fe29ba94c937e3ffba8
+z
+Jfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/IndexImgMapper.java,8\6\8697c48aa0e00efc7fb8ba98e07589937c0e5e4d
