@@ -313,8 +313,6 @@ Vfmmall-parent/api/src/main/java/com/qingfeng/fm/interceptor/CheckTokenIntercept
 Pfmmall-parent/service/src/main/java/com/qingfeng/fm/service/IndexImgService.java,7\b\7bc6fcf996d5094b959ed682069e5099e5d8f14e
 ‰
 Yfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/IndexImgServiceImpl.java,7\e\7e3288c4deb6189614375c06ecb2f96b6585bd66
-
-Ofmmall-parent/api/src/main/java/com/qingfeng/fm/controller/IndexController.java,c\4\c44a18aa627645bfdf06739dd145c4d614c836a1
 s
 Cfmmall-parent/api/src/main/java/com/qingfeng/fm/ApiApplication.java,c\4\c46190c95a52793cb6076fe29ba94c937e3ffba8
 z
