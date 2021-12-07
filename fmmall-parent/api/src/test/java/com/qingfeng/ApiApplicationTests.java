@@ -2,7 +2,9 @@ package com.qingfeng;
 
 import com.qingfeng.fm.ApiApplication;
 import com.qingfeng.fm.dao.CategoryMapper;
+import com.qingfeng.fm.dao.ProductMapper;
 import com.qingfeng.fm.entity.CategoryVO;
+import com.qingfeng.fm.entity.ProductVO;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,9 @@ class ApiApplicationTests {
     @Autowired
     private CategoryMapper categoryMapper;
 
+    @Autowired
+    private ProductMapper productMapper;
+
     @Test
     void contextLoads() {
         List<CategoryVO> categoryVOS = categoryMapper.selectAllCategories2(0);
@@ -32,6 +37,14 @@ class ApiApplicationTests {
                     System.out.println("\t\t"+c3);
                 }
             }
+        }
+    }
+
+    @Test
+    public void testRecommand(){
+        List<ProductVO> productVOS = productMapper.selectRecommendProducts();
+        for (ProductVO productVO : productVOS) {
+            System.out.println(productVO);
         }
     }
 

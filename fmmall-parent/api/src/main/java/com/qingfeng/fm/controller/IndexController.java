@@ -2,6 +2,7 @@ package com.qingfeng.fm.controller;
 
 import com.qingfeng.fm.service.CategoryService;
 import com.qingfeng.fm.service.IndexImgService;
+import com.qingfeng.fm.service.ProductService;
 import com.qingfeng.fm.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -28,6 +29,8 @@ public class IndexController {
     private IndexImgService indexImgService;
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private ProductService productService;
 
     @GetMapping("/indeximg")
     @ApiOperation("首页轮播图接口")
@@ -39,5 +42,11 @@ public class IndexController {
     @ApiOperation("商品分类查询接口")
     public ResultVO listCategory(){
         return categoryService.listCategories();
+    }
+
+    @GetMapping("/list-recommends")
+    @ApiOperation("查询推荐商品的接口")
+    public ResultVO listRecommendProducts(){
+        return productService.listRecommendProducts();
     }
 }

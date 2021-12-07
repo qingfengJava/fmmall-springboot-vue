@@ -235,8 +235,6 @@ w
 Gfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/OrderItem.java,9\7\97269ad992416b2311155f222b5a6fafadb1b868
 {
 Kfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/OrderItemMapper.java,8\e\8e99dc5b25eb87b5656276081f4e6fcdbd0b087f
-t
-Dfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Orders.java,6\f\6f4c413150c5bf2adafeb439102cfa3722b4558d
 x
 Hfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/OrdersMapper.java,5\6\564047eac385eb0dec6d5a46fe88e7a9f0d2afe7
 I
@@ -251,18 +249,10 @@ M
 fmmall-parent/service/pom.xml,8\8\88389db81d22e89fd14a6a4a5d0dbea9f72493f7
 E
 fmmall-parent/pom.xml,2\6\2648ed6dda916f1b90dcebd9b2e1f5e82da08229
-u
-Efmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Product.java,c\1\c1f1af6a857f9903a86770e089c47efb5a02be4b
 }
 Mfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductComments.java,0\3\0396b81aa6db4ce89975341e18c3616ac7fbb106
 Å
 Qfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductCommentsMapper.java,b\0\b005a71eba804942145cca7147e13893b0d1448e
-x
-Hfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductImg.java,5\2\52480339cf25d654fd10faab41fc60e20cb383bc
-|
-Lfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductImgMapper.java,8\7\8762436ca545d65d3206d9450a6c101413ba0b64
-y
-Ifmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductMapper.java,3\7\37befc2feeab9904b8a4170d259fce65bf9cf6ab
 {
 Kfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductParams.java,5\3\5333638be876ff4310c6253497f9ef250520a2f0
 
@@ -317,3 +307,5 @@ s
 Cfmmall-parent/api/src/main/java/com/qingfeng/fm/ApiApplication.java,c\4\c46190c95a52793cb6076fe29ba94c937e3ffba8
 z
 Jfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/IndexImgMapper.java,8\6\8697c48aa0e00efc7fb8ba98e07589937c0e5e4d
+v
+Ffmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Category.java,b\a\ba998e6099f2dedb301f35383f38d1e60d5a4457

@@ -1,7 +1,9 @@
 package com.qingfeng.fm.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
-import javax.persistence.*;
 
 /**
  * @author 清风学Java
@@ -172,5 +174,18 @@ public class ProductImg {
      */
     public void setUpdatedTime(Date updatedTime) {
         this.updatedTime = updatedTime;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductImg{" +
+                "id='" + id + '\'' +
+                ", itemId='" + itemId + '\'' +
+                ", url='" + url + '\'' +
+                ", sort=" + sort +
+                ", isMain=" + isMain +
+                ", createdTime=" + createdTime +
+                ", updatedTime=" + updatedTime +
+                '}';
     }
 }
