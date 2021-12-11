@@ -16,4 +16,10 @@ public interface CategoryService {
      * @return
      */
     public ResultVO listCategories();
+
+    /**
+     * 查询一级类别  会包含商品对象
+     * @return
+     */
+    public ResultVO listFirstLevelCategories();
 }

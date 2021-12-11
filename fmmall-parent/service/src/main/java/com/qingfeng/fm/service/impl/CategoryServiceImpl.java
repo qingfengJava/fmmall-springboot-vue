@@ -23,10 +23,26 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryMapper categoryMapper;
 
+    /**
+     * 查询分类列表（包含三个级别的分类）
+     * @return
+     */
     @Override
     public ResultVO listCategories() {
         //调用mapper查询所有的列表信息
         List<CategoryVO> categoryVOS = categoryMapper.selectAllCategories();
+        //将信息封装到resultVO中
+        ResultVO resultVO = new ResultVO(ResStatus.OK, "success", categoryVOS);
+        return resultVO;
+    }
+
+    /**
+     * 查询所有的一级分类，同时查询当前一级分类下销量最高的6个商品
+     * @return
+     */
+    @Override
+    public ResultVO listFirstLevelCategories() {
+        List<CategoryVO> categoryVOS = categoryMapper.selectFirstLevelCategories();
         //将信息封装到resultVO中
         ResultVO resultVO = new ResultVO(ResStatus.OK, "success", categoryVOS);
         return resultVO;

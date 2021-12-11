@@ -44,5 +44,22 @@
 
 	</select>
 
+	<!-- 查询某个类别下销量前六的商品，查询商品的同时，关联查询商品的图片 -->
+	<select id="selectTop6ByCategory" resultMap="productVOMap">
+		select product_id,
+			   product_name,
+			   category_id,
+			   root_category_id,
+			   sold_num,
+			   product_status,
+			   content,
+			   create_time,
+			   update_time
+		from product
+		where root_category_id = #{cid}
+		ORDER BY sold_num desc
+		LIMIT 0,6
+	</select>
+
 
 </mapper>

@@ -30,4 +30,10 @@ public interface CategoryMapper extends GeneralDao<Category> {
      * @return
      */
     public List<CategoryVO> selectAllCategories2(int parentId);
+
+    /**
+     * 查询一级类别
+     * @return
+     */
+    public List<CategoryVO> selectFirstLevelCategories();
 }
