@@ -16,4 +16,18 @@ public interface ProductService {
      * @return
      */
     public ResultVO listRecommendProducts();
+
+    /**
+     * 根据商品Id查询商品基本信息
+     * @param productId
+     * @return
+     */
+    public ResultVO getProductBasicInfo(String productId);
+
+    /**
+     * 根据商品id，查询商品详情信息
+     * @param productId
+     * @return
+     */
+    public ResultVO getProductParamsById(String productId);
 }

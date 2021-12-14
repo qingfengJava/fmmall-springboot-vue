@@ -2,12 +2,14 @@ package com.qingfeng.fm.dao;
 
 import com.qingfeng.fm.entity.ProductImg;
 import com.qingfeng.fm.generaldao.GeneralDao;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * @author Administrator
  */
+@Repository
 public interface ProductImgMapper extends GeneralDao<ProductImg> {
 
     /**
