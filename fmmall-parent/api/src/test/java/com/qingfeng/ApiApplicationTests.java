@@ -2,8 +2,10 @@ package com.qingfeng;
 
 import com.qingfeng.fm.ApiApplication;
 import com.qingfeng.fm.dao.CategoryMapper;
+import com.qingfeng.fm.dao.ProductCommentsMapper;
 import com.qingfeng.fm.dao.ProductMapper;
 import com.qingfeng.fm.entity.CategoryVO;
+import com.qingfeng.fm.entity.ProductCommentsVO;
 import com.qingfeng.fm.entity.ProductVO;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -22,6 +24,9 @@ class ApiApplicationTests {
 
     @Autowired
     private ProductMapper productMapper;
+
+    @Autowired
+    private ProductCommentsMapper productCommentsMapper;
 
     @Test
     void contextLoads() {
@@ -53,6 +58,14 @@ class ApiApplicationTests {
         List<CategoryVO> categoryVOS = categoryMapper.selectFirstLevelCategories();
         for (CategoryVO categoryVO : categoryVOS) {
             System.out.println(categoryVO);
+        }
+    }
+
+    @Test
+    public void testSelectComments(){
+        List<ProductCommentsVO> productCommentsVOS = productCommentsMapper.selectCommentsByProductId("3",1,2);
+        for (ProductCommentsVO productCommentsVO : productCommentsVOS) {
+            System.out.println(productCommentsVO);
         }
     }
 

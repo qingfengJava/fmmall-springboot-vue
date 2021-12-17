@@ -249,10 +249,6 @@ M
 fmmall-parent/service/pom.xml,8\8\88389db81d22e89fd14a6a4a5d0dbea9f72493f7
 E
 fmmall-parent/pom.xml,2\6\2648ed6dda916f1b90dcebd9b2e1f5e82da08229
-}
-Mfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductComments.java,0\3\0396b81aa6db4ce89975341e18c3616ac7fbb106
-Å
-Qfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductCommentsMapper.java,b\0\b005a71eba804942145cca7147e13893b0d1448e
 {
 Kfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductParams.java,5\3\5333638be876ff4310c6253497f9ef250520a2f0
 x
@@ -299,8 +295,6 @@ Vfmmall-parent/api/src/main/java/com/qingfeng/fm/interceptor/CheckTokenIntercept
 Pfmmall-parent/service/src/main/java/com/qingfeng/fm/service/IndexImgService.java,7\b\7bc6fcf996d5094b959ed682069e5099e5d8f14e
 â
 Yfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/IndexImgServiceImpl.java,7\e\7e3288c4deb6189614375c06ecb2f96b6585bd66
-s
-Cfmmall-parent/api/src/main/java/com/qingfeng/fm/ApiApplication.java,c\4\c46190c95a52793cb6076fe29ba94c937e3ffba8
 z
 Jfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/IndexImgMapper.java,8\6\8697c48aa0e00efc7fb8ba98e07589937c0e5e4d
 t
@@ -319,8 +313,6 @@ x
 Hfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/CategoryVO.java,f\1\f1b9512260a3fc3a1087631dadfda79dd3d07842
 z
 Jfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/CategoryMapper.java,1\c\1c86449ef0a9b017ed4a0b91ec8077d4dd5b1f2c
-u
-Efmmall-parent/api/src/test/java/com/qingfeng/ApiApplicationTests.java,2\8\283918821a1f3c3c4030651032842c8cea78cd23
 
 Ofmmall-parent/api/src/main/java/com/qingfeng/fm/controller/IndexController.java,c\4\c44a18aa627645bfdf06739dd145c4d614c836a1
 Ä
@@ -329,3 +321,17 @@ Pfmmall-parent/service/src/main/java/com/qingfeng/fm/service/CategoryService.jav
 Yfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/CategoryServiceImpl.java,2\2\22750731207853c2e8d737bd203988794934d91f
 y
 Ifmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductMapper.java,3\7\37befc2feeab9904b8a4170d259fce65bf9cf6ab
+u
+Efmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Product.java,c\1\c1f1af6a857f9903a86770e089c47efb5a02be4b
+
+Ofmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductParamsMapper.java,3\5\35378533e78906e80668ac6d548fc9232c04f812
+|
+Lfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductSkuMapper.java,d\2\d2413b6cc74444d7dbd7c7cadb93ceca70f7b3fd
+|
+Lfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductImgMapper.java,8\7\8762436ca545d65d3206d9450a6c101413ba0b64
+s
+Cfmmall-parent/api/src/main/java/com/qingfeng/fm/ApiApplication.java,c\4\c46190c95a52793cb6076fe29ba94c937e3ffba8
+
+Ofmmall-parent/service/src/main/java/com/qingfeng/fm/service/ProductService.java,c\6\c6bb4fc36bcaac76adde25b7c28d15a24641ad33
+à
+Xfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/ProductServiceImpl.java,e\c\ec4ca304fb13405b3476dd7984fc2a4da69feed8
