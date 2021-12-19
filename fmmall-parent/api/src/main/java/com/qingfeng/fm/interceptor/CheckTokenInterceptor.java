@@ -30,16 +30,15 @@ public class CheckTokenInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //放行OPTIONS请求
         String method = request.getMethod();
-        System.out.println(method);
         if ("OPTIONS".equalsIgnoreCase(method)){
             return true;
         }
 
         String token = request.getHeader("token");
-        System.out.println("--------------"+token);
 
         if (token == null){
-            ResultVO resultVO = new ResultVO(ResStatus.NO, "请先登录！", null);
+            //未登录，状态码是20001
+            ResultVO resultVO = new ResultVO(ResStatus.LOGIN_FAIL_NOT, "请先登录！", null);
             //提示先登录
             doResponse(response,resultVO);
         }else{
@@ -52,13 +51,14 @@ public class CheckTokenInterceptor implements HandlerInterceptor {
                 Jws<Claims> claimsJws = parser.parseClaimsJws(token);
                 return true;
             } catch(ExpiredJwtException e){
-                ResultVO resultVO = new ResultVO(ResStatus.NO, "登录过期，请重新登录！", null);
+                //登录过期，状态码20002
+                ResultVO resultVO = new ResultVO(ResStatus.LOGIN_FAIL_OVERDUE, "登录过期，请重新登录！", null);
                 doResponse(response,resultVO);
             } catch(UnsupportedJwtException e){
                 ResultVO resultVO = new ResultVO(ResStatus.NO, "token不合法，请自重！", null);
                 doResponse(response,resultVO);
             } catch (Exception e) {
-                ResultVO resultVO = new ResultVO(ResStatus.NO, "请先登录！", null);
+                ResultVO resultVO = new ResultVO(ResStatus.LOGIN_FAIL_NOT, "请先登录！", null);
                 doResponse(response,resultVO);
             }
         }

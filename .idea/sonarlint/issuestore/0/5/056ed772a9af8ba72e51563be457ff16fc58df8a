@@ -1,7 +1,0 @@
-
-Z
-java:S18544"=Remove this useless assignment to local variable "claimsJws".(äû²Â8ŞŠºÔ/
-N	java:S106!"9Replace this use of System.out or System.err by a logger.(£·®
-U	java:S106'"9Replace this use of System.out or System.err by a logger.(éÃâş8ıĞÒÚÔ/
-K
-java:S14814".Remove this unused "claimsJws" local variable.(äû²Â8èŠºÔ/
