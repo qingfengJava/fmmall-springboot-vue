@@ -2,6 +2,7 @@ package com.qingfeng.fm.service.impl;
 
 import com.qingfeng.fm.dao.ShoppingCartMapper;
 import com.qingfeng.fm.entity.ShoppingCart;
+import com.qingfeng.fm.entity.ShoppingCartVO;
 import com.qingfeng.fm.service.ShoppingCartService;
 import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author 清风学Java
@@ -33,5 +35,12 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         }else{
             return new ResultVO(ResStatus.NO,"fail",null);
         }
+    }
+
+    @Override
+    public ResultVO listShoppingCartByUserId(int userId) {
+        List<ShoppingCartVO> list = shoppingCartMapper.selectShopCartByUserId(userId);
+        ResultVO resultVO = new ResultVO(ResStatus.OK,"success",list);
+        return resultVO;
     }
 }

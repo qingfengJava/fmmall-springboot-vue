@@ -4,9 +4,11 @@ import com.qingfeng.fm.ApiApplication;
 import com.qingfeng.fm.dao.CategoryMapper;
 import com.qingfeng.fm.dao.ProductCommentsMapper;
 import com.qingfeng.fm.dao.ProductMapper;
+import com.qingfeng.fm.dao.ShoppingCartMapper;
 import com.qingfeng.fm.entity.CategoryVO;
 import com.qingfeng.fm.entity.ProductCommentsVO;
 import com.qingfeng.fm.entity.ProductVO;
+import com.qingfeng.fm.entity.ShoppingCartVO;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,9 @@ class ApiApplicationTests {
 
     @Autowired
     private ProductCommentsMapper productCommentsMapper;
+
+    @Autowired
+    private ShoppingCartMapper shoppingCartMapper;
 
     @Test
     void contextLoads() {
@@ -67,6 +72,12 @@ class ApiApplicationTests {
         for (ProductCommentsVO productCommentsVO : productCommentsVOS) {
             System.out.println(productCommentsVO);
         }
+    }
+
+    @Test
+    public void testShopCart(){
+        List<ShoppingCartVO> shoppingCartVOS = shoppingCartMapper.selectShopCartByUserId(1);
+        System.out.println(shoppingCartVOS);
     }
 
 }

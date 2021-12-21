@@ -18,4 +18,11 @@ public interface ShoppingCartService {
      * @return
      */
     public ResultVO addShoppingCart(ShoppingCart cart);
+
+    /**
+     * 根据用户Id查询用户对应的购物车的信息
+     * @param userId
+     * @return
+     */
+    public ResultVO listShoppingCartByUserId(int userId);
 }
