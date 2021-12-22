@@ -43,4 +43,28 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         ResultVO resultVO = new ResultVO(ResStatus.OK,"success",list);
         return resultVO;
     }
+
+    @Override
+    public ResultVO updateCartNum(int cartId, int cartNum) {
+        int i = shoppingCartMapper.updateCartNumByCartId(cartId, cartNum);
+        if (i > 0){
+            //表示成功
+            return new ResultVO(ResStatus.OK,"update success",null);
+        }else{
+            //失败
+            return new ResultVO(ResStatus.NO,"update fail",null);
+        }
+    }
+
+    @Override
+    public ResultVO deleteByCartId(int cartId) {
+        int i = shoppingCartMapper.deleteByCartId(cartId);
+        if (i > 0){
+            //表示删除成功
+            return new ResultVO(ResStatus.OK,"delete success",null);
+        }else{
+            //删除失败
+            return new ResultVO(ResStatus.OK,"delete fail",null);
+        }
+    }
 }

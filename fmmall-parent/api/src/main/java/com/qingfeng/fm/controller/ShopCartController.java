@@ -43,4 +43,21 @@ public class ShopCartController {
         }
         return resultVO;
     }
+
+    @ApiOperation("根据购物车Id修改购物车数量的接口")
+    @PutMapping("/update/{cid}/{cnum}")
+    public ResultVO updateNum(@PathVariable("cid") Integer cartId,
+                              @PathVariable("cnum") Integer cartNum,
+                              @RequestHeader("token") String token) {
+        ResultVO resultVO = shoppingCartService.updateCartNum(cartId, cartNum);
+        return resultVO;
+    }
+
+    @ApiOperation("根据购物车Id删除对应的商品信息接口")
+    @GetMapping("/delete/{cid}")
+    public ResultVO deleteByCartId(@PathVariable("cid") Integer cartId,
+                                   @RequestHeader("token") String token){
+        ResultVO resultVO = shoppingCartService.deleteByCartId(cartId);
+        return resultVO;
+    }
 }

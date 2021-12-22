@@ -29,6 +29,7 @@
         <result column="sku_name" jdbcType="VARCHAR" property="skuName"/>
     </resultMap>
 
+    <!-- 根据用户Id查询用户对应的购物车信息 -->
     <select id="selectShopCartByUserId" resultMap="ShopCartVOMap">
         select c.cart_id,
                c.product_id,
@@ -51,4 +52,14 @@
         where user_id = #{userId}
           and i.is_main = 1
     </select>
+
+    <!-- 根据购物车Id修改购物车商品数量 -->
+    <update id="updateCartNumByCartId">
+        update shopping_cart set cart_num=#{cartNum} where cart_id = #{cartId}
+    </update>
+
+    <!-- 根据购物车Id删除购物车信息 -->
+    <delete id="deleteByCartId">
+        delete from shopping_cart where cart_id = #{cartId}
+    </delete>
 </mapper>

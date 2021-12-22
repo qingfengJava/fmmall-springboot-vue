@@ -25,4 +25,19 @@ public interface ShoppingCartService {
      * @return
      */
     public ResultVO listShoppingCartByUserId(int userId);
+
+    /**
+     * 根据购物车Id修改购物车商品数量
+     * @param cartId 购物车Id
+     * @param cartNum 要修改的商品数量
+     * @return
+     */
+    public ResultVO updateCartNum(int cartId,int cartNum);
+
+    /**
+     * 根据购物车Id删除购物车信息
+     * @param cartId
+     * @return
+     */
+    public ResultVO deleteByCartId(int cartId);
 }
