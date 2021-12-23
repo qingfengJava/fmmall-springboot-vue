@@ -40,4 +40,11 @@ public interface ShoppingCartService {
      * @return
      */
     public ResultVO deleteByCartId(int cartId);
+
+    /**
+     * 根据购物车Id查询对应的购物车信息
+     * @param cids
+     * @return
+     */
+    public ResultVO listShoppingCartsByCids(String cids);
 }

@@ -53,6 +53,31 @@
           and i.is_main = 1
     </select>
 
+    <select id="selectShopCartByCids" resultMap="ShopCartVOMap">
+        select c.cart_id,
+               c.product_id,
+               c.sku_id,
+               c.sku_props,
+               c.user_id,
+               c.cart_num,
+               c.cart_time,
+               c.product_price,
+               p.product_name,
+               i.url,
+               s.original_price,
+               s.sell_price,
+               s.sku_name
+        from shopping_cart c
+                 inner join product p
+                 inner join product_img i
+                 inner join product_sku s
+                 on c.product_id = p.product_id and i.item_id = p.product_id and c.sku_id = s.sku_id
+        where i.is_main=1 and c.cart_id in
+        <foreach collection="cids" item="cid" separator="," open="(" close=")">
+            #{cid}
+        </foreach>
+    </select>
+
     <!-- 根据购物车Id修改购物车商品数量 -->
     <update id="updateCartNumByCartId">
         update shopping_cart set cart_num=#{cartNum} where cart_id = #{cartId}

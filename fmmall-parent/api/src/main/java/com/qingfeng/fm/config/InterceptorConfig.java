@@ -24,6 +24,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
         registry.addInterceptor(checkTokenInterceptor)
                 .addPathPatterns("/shopcart/**")
                 .addPathPatterns("/orders/**")
+                .addPathPatterns("/useraddr/**")
                 .excludePathPatterns("/user/**");
     }
 }

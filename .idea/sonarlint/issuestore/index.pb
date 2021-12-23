@@ -259,8 +259,6 @@ y
 Ifmmall-parent/api/src/main/java/com/qingfeng/fm/config/SwaggerConfig.java,9\f\9ff137d0abd81e9693ff74ebf2470f8b3689de2b
 v
 Ffmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/UserAddr.java,6\8\6855d612b1ad36cae4f77ae253f5a9b7455b78be
-z
-Jfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/UserAddrMapper.java,d\1\d1d5296518e22c2fc76bf9ccb069a968d85f43c3
 ~
 Nfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/UserLoginHistory.java,6\2\629aab242a3468be815b587ee9a5c90aa3d0afb3
 Ç
@@ -273,8 +271,6 @@ s
 Cfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Users.java,c\d\cd18693a525e3e4e091632945cddfad030baea14
 y
 Ifmmall-parent/common/src/main/java/com/qingfeng/fm/utils/Base64Utils.java,a\d\adf85b68fa9d0f0a9879965ab01d7560eac7ab02
-}
-Mfmmall-parent/api/src/main/java/com/qingfeng/fm/config/InterceptorConfig.java,4\9\49725e4d476da99511082af9db4762bd6deac6b9
 Ö
 Ufmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/UserServiceImpl.java,d\4\d46607e48988424a4e77afa1454890dad918a46f
 9
@@ -337,7 +333,13 @@ Mfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductComments.java,
 `fmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/ProductCommentsServiceImpl.java,5\8\58b7744b5fe0255baa77a5874db7806c07a7438d
 t
 Dfmmall-parent/common/src/main/java/com/qingfeng/fm/vo/ResStatus.java,5\9\596102f8743d7ef9d413d0f2fa5c73b4a9127944
-Ü
-Vfmmall-parent/api/src/main/java/com/qingfeng/fm/interceptor/CheckTokenInterceptor.java,0\5\056ed772a9af8ba72e51563be457ff16fc58df8a
 Å
 Qfmmall-parent/api/src/main/java/com/qingfeng/fm/controller/ProductController.java,e\4\e4795661b31e5bf1bacfe1cd6ec11849d71c462f
+z
+Jfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ShoppingCart.java,b\2\b2e3d8698c9b6df4749a570922d4f41e1218cbc4
+|
+Lfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ShoppingCartVO.java,f\9\f9dd2e35fb1318baa72221bd61acd3376cac17d8
+~
+Nfmmall-parent/api/src/main/java/com/qingfeng/fm/controller/UserController.java,1\9\195b2e125ed0982fd596fd6cf8cfaca59a88fc38
+Ü
+Vfmmall-parent/api/src/main/java/com/qingfeng/fm/interceptor/CheckTokenInterceptor.java,0\5\056ed772a9af8ba72e51563be457ff16fc58df8a

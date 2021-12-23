@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -66,5 +67,19 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             //删除失败
             return new ResultVO(ResStatus.OK,"delete fail",null);
         }
+    }
+
+    @Override
+    public ResultVO listShoppingCartsByCids(String cids) {
+        //注意：使用tkmapper只能查询到某张表中拥有的字段，因此没法查询到商品名称、图片、单价等信息
+        String[] arr = cids.split(",");
+        List<Integer> cartIds = new ArrayList<>();
+        for (String s : arr) {
+            cartIds.add(Integer.parseInt(s));
+        }
+        List<ShoppingCartVO> list = shoppingCartMapper.selectShopCartByCids(cartIds);
+        ResultVO resultVO = new ResultVO(ResStatus.OK, "success", list);
+
+        return resultVO;
     }
 }

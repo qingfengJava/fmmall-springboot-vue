@@ -36,4 +36,11 @@ public interface ShoppingCartMapper extends GeneralDao<ShoppingCart> {
      * @return
      */
     public int deleteByCartId(@Param("cartId") int cartId);
+
+    /**
+     * 根据购物车Id删除购物车信息
+     * @param cids
+     * @return
+     */
+    public List<ShoppingCartVO> selectShopCartByCids(List<Integer> cids);
 }

@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -76,8 +77,16 @@ class ApiApplicationTests {
 
     @Test
     public void testShopCart(){
-        List<ShoppingCartVO> shoppingCartVOS = shoppingCartMapper.selectShopCartByUserId(1);
+        /*List<ShoppingCartVO> shoppingCartVOS = shoppingCartMapper.selectShopCartByUserId(1);
+        System.out.println(shoppingCartVOS);*/
+
+        List<Integer> cids = new ArrayList<>();
+        cids.add(1);
+        cids.add(8);
+        cids.add(10);
+        List<ShoppingCartVO> shoppingCartVOS = shoppingCartMapper.selectShopCartByCids(cids);
         System.out.println(shoppingCartVOS);
+
     }
 
 }
