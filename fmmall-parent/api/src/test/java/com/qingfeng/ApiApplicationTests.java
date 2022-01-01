@@ -1,21 +1,17 @@
 package com.qingfeng;
 
 import com.qingfeng.fm.ApiApplication;
-import com.qingfeng.fm.dao.CategoryMapper;
-import com.qingfeng.fm.dao.ProductCommentsMapper;
-import com.qingfeng.fm.dao.ProductMapper;
-import com.qingfeng.fm.dao.ShoppingCartMapper;
-import com.qingfeng.fm.entity.CategoryVO;
-import com.qingfeng.fm.entity.ProductCommentsVO;
-import com.qingfeng.fm.entity.ProductVO;
-import com.qingfeng.fm.entity.ShoppingCartVO;
+import com.qingfeng.fm.dao.*;
+import com.qingfeng.fm.entity.*;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -33,6 +29,9 @@ class ApiApplicationTests {
 
     @Autowired
     private ShoppingCartMapper shoppingCartMapper;
+
+    @Autowired
+    private OrdersMapper ordersMapper;
 
     @Test
     void contextLoads() {
@@ -80,13 +79,40 @@ class ApiApplicationTests {
         /*List<ShoppingCartVO> shoppingCartVOS = shoppingCartMapper.selectShopCartByUserId(1);
         System.out.println(shoppingCartVOS);*/
 
-        List<Integer> cids = new ArrayList<>();
+        /*List<Integer> cids = new ArrayList<>();
         cids.add(1);
         cids.add(8);
         cids.add(10);
         List<ShoppingCartVO> shoppingCartVOS = shoppingCartMapper.selectShopCartByCids(cids);
-        System.out.println(shoppingCartVOS);
+        System.out.println(shoppingCartVOS);*/
 
+        String cids = "1,8";
+
+        String[] arr = cids.split(",");
+        List<Integer> cidsList = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            cidsList.add(Integer.parseInt(arr[i]));
+        }
+        List<ShoppingCartVO> list = shoppingCartMapper.selectShopCartByCids(cidsList);
+        for (ShoppingCartVO shoppingCartVO : list) {
+            System.out.println(shoppingCartVO);
+        }
     }
+
+    @Test
+    public void test(){
+        //1、查询超过30min订单状态依然为待支付状态的订单
+        Example example = new Example(Orders.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("status","1");
+
+        Date time = new Date(System.currentTimeMillis()-30*60*1000);
+        //生成订单的时间比当前时间减去半个小时还小，说明是超时订单
+        criteria.andLessThan("createTime",time);
+
+        List<Orders> orders = ordersMapper.selectByExample(example);
+        orders.forEach(order -> System.out.println(order.getOrderId()+"\t"+order.getCreateTime()+"\t"+order.getStatus()));
+    }
+
 
 }

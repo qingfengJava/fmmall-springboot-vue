@@ -62,4 +62,9 @@ public class ShoppingCartVO {
     private Double originalPrice;
     private Double sellPrice;
     private String skuName;
+
+    /**
+     * 库存
+     */
+    private int skuStock;
 }

@@ -29,6 +29,23 @@
         <result column="sku_name" jdbcType="VARCHAR" property="skuName"/>
     </resultMap>
 
+    <resultMap id="ShopCartVOMap2" type="com.qingfeng.fm.entity.ShoppingCartVO">
+        <id column="cart_id" jdbcType="INTEGER" property="cartId"/>
+        <result column="product_id" jdbcType="VARCHAR" property="productId"/>
+        <result column="sku_id" jdbcType="VARCHAR" property="skuId"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="cart_num" jdbcType="VARCHAR" property="cartNum"/>
+        <result column="cart_time" jdbcType="VARCHAR" property="cartTime"/>
+        <result column="product_price" jdbcType="DECIMAL" property="productPrice"/>
+        <result column="sku_props" jdbcType="VARCHAR" property="skuProps"/>
+        <result column="product_name" jdbcType="DECIMAL" property="productName"/>
+        <result column="url" jdbcType="VARCHAR" property="productImg"/>
+        <result column="original_price" jdbcType="DECIMAL" property="originalPrice"/>
+        <result column="sell_price" jdbcType="DECIMAL" property="sellPrice"/>
+        <result column="sku_name" jdbcType="VARCHAR" property="skuName"/>
+        <result column="stock" jdbcType="VARCHAR" property="skuStock"/>
+    </resultMap>
+
     <!-- 根据用户Id查询用户对应的购物车信息 -->
     <select id="selectShopCartByUserId" resultMap="ShopCartVOMap">
         select c.cart_id,
@@ -53,7 +70,7 @@
           and i.is_main = 1
     </select>
 
-    <select id="selectShopCartByCids" resultMap="ShopCartVOMap">
+    <select id="selectShopCartByCids" resultMap="ShopCartVOMap2">
         select c.cart_id,
                c.product_id,
                c.sku_id,
@@ -66,7 +83,8 @@
                i.url,
                s.original_price,
                s.sell_price,
-               s.sku_name
+               s.sku_name,
+               s.stock
         from shopping_cart c
                  inner join product p
                  inner join product_img i
