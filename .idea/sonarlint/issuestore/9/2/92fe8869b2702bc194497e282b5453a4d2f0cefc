@@ -1,0 +1,7 @@
+
+M
+java:S1854?"7Remove this useless assignment to local variable "map".(”Ÿ¹Í
+>
+java:S1481?"(Remove this unused "map" local variable.(”Ÿ¹Í
+o
+java:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì¼§ù

@@ -1,0 +1,8 @@
+
+P
+java:S18545"5Remove this useless assignment to local variable "i".(Ñø™úþÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(¸ªóëÿÿÿÿÿ
+A
+java:S14815"&Remove this unused "i" local variable.(Ñø™úþÿÿÿÿ
+^
+java:S11921"HDefine a constant instead of duplicating this literal "success" 3 times.(Ð¢„•

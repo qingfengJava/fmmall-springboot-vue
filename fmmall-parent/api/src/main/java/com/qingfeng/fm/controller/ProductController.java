@@ -53,4 +53,39 @@ public class ProductController {
     public ResultVO getProductCommentsCount(@PathVariable("pid") String pid){
         return productCommentsService.getCommentsCountByProductId(pid);
     }
+
+    @ApiOperation("根据类别查询商品接口")
+    @GetMapping("/listbycid/{cid}")
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "int",name="pageNum", value = "当前页码",required = true),
+            @ApiImplicitParam(dataType = "int",name="limit", value = "每页显示条数",required = true)
+    })
+    public ResultVO getProductsByCategoryId(@PathVariable("cid") int cid,int pageNum,int limit){
+        return productService.getProductsByCategoryId(cid,pageNum,limit);
+    }
+
+    @ApiOperation("根据类别查询商品品牌接口")
+    @GetMapping("/listbrands/{cid}")
+    public ResultVO getBrandsByCategoryId(@PathVariable("cid") int cid){
+        return productService.listBrands(cid);
+    }
+
+    @ApiOperation("根据关键字查询商品接口")
+    @GetMapping("/listbykeyword")
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "string",name="keyword", value = "搜索的关键字",required = true),
+            @ApiImplicitParam(dataType = "int",name="pageNum", value = "当前页码",required = true),
+            @ApiImplicitParam(dataType = "int",name="limit", value = "每页显示条数",required = true)
+    })
+    public ResultVO searchProducts(String keyword,int pageNum,int limit){
+        return productService.searchProduct(keyword,pageNum,limit);
+    }
+
+    @ApiOperation("根据关键字查询商品品牌接口")
+    @GetMapping("/listbrands-keyword")
+    @ApiImplicitParam(dataType = "string",name="keyword", value = "搜索的关键字",required = true)
+    public ResultVO getBrandsByKeyWords(String keyword){
+        return productService.listBrands(keyword);
+    }
+
 }

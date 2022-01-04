@@ -6,6 +6,7 @@ import com.qingfeng.fm.dao.ProductParamsMapper;
 import com.qingfeng.fm.dao.ProductSkuMapper;
 import com.qingfeng.fm.entity.*;
 import com.qingfeng.fm.service.ProductService;
+import com.qingfeng.fm.utils.PageHelper;
 import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,5 +91,54 @@ public class ProductServiceImpl implements ProductService {
         }else {
             return new ResultVO(ResStatus.NO,"此商品可能为三无产品",null);
         }
+    }
+
+    @Override
+    public ResultVO getProductsByCategoryId(int categoryId, int pageNum, int limit) {
+        //1、查询分页数据
+        int start = (pageNum - 1)*limit;
+        List<ProductVO> productVOS = productMapper.selectProductByCategoryId(categoryId,start, limit);
+        //2、查询当前类别下的商品的总记录数
+        Example example = new Example(Product.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("categoryId",categoryId);
+        int count = productMapper.selectCountByExample(example);
+        //3、计算总页数
+        int pageCount = count % limit == 0 ? count/limit : count/limit+1;
+        //4、封装返回数据
+        PageHelper<ProductVO> pageHelper = new PageHelper<>(count, pageCount, productVOS);
+        return new ResultVO(ResStatus.OK,"success",pageHelper);
+    }
+
+    @Override
+    public ResultVO listBrands(int categoryId) {
+        List<String> brands = productMapper.selectBrandByCategoryId(categoryId);
+        return new ResultVO(ResStatus.OK,"success",brands);
+    }
+
+    @Override
+    public ResultVO searchProduct(String kw, int pageNum, int limit) {
+        //1、查询搜素结果
+        kw = "%"+kw+"%";
+        int start = (pageNum-1)*limit;
+        List<ProductVO> productVOS = productMapper.selectProductByKeyword(kw, start, limit);
+        //2、查询总记录数
+        Example example = new Example(Product.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andLike("productName",kw);
+        int count = productMapper.selectCountByExample(example);
+        //3、计算总页数
+        int pageCount = count%limit==0? count/limit:count/limit+1;
+
+        //4、封装，返回数据
+        PageHelper<ProductVO> pageHelper = new PageHelper<>(count, pageCount, productVOS);
+        return new ResultVO(ResStatus.OK,"SUCCESS",pageHelper);
+    }
+
+    @Override
+    public ResultVO listBrands(String kw) {
+        kw = "%"+kw+"%";
+        List<String> brands = productMapper.selectBrandByKeyWord(kw);
+        return new ResultVO(ResStatus.OK,"SUCCESS", brands);
     }
 }

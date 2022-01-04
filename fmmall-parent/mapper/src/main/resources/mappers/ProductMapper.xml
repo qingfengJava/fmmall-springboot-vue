@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qingfeng.fm.dao.ProductMapper">
+
 	<resultMap id="productMap" type="com.qingfeng.fm.entity.Product">
 		<id column="product_id" jdbcType="VARCHAR" property="productId"/>
 		<result column="product_name" jdbcType="VARCHAR" property="productName"/>
@@ -59,6 +60,72 @@
 		where root_category_id = #{cid}
 		ORDER BY sold_num desc
 		LIMIT 0,6
+	</select>
+
+	<resultMap id="productVOMap2" type="com.qingfeng.fm.entity.ProductVO">
+		<id column="product_id" jdbcType="VARCHAR" property="productId"/>
+		<result column="product_name" jdbcType="VARCHAR" property="productName"/>
+		<result column="category_id" jdbcType="INTEGER" property="categoryId"/>
+		<result column="root_category_id" jdbcType="INTEGER" property="rootCategoryId"/>
+		<result column="sold_num" jdbcType="INTEGER" property="soldNum"/>
+		<result column="product_status" jdbcType="INTEGER" property="productStatus"/>
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+		<result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+		<result column="content" jdbcType="LONGVARCHAR" property="content"/>
+		<!-- 子查询：根据商品Id查询价格最低的套餐 -->
+		<collection property="skus" column="product_id" select="com.qingfeng.fm.dao.ProductSkuMapper.selectLowerestPriceByProductId"/>
+	</resultMap>
+
+    <select id="selectProductByCategoryId" resultMap="productVOMap2">
+		select product_id,
+			   product_name,
+			   category_id,
+			   root_category_id,
+			   sold_num,
+			   product_status,
+			   content,
+			   create_time,
+			   update_time
+		from product
+		where category_id=#{cid}
+		limit #{start},#{limit}
+	</select>
+
+	<select id="selectBrandByCategoryId" resultSets="java.util.List" resultType="String">
+		select DISTINCT brand
+		from product_params
+		where product_id
+		          in (
+		              select product_id
+		              from product
+		              where category_id = #{cid}
+		          )
+	</select>
+
+	<select id="selectProductByKeyword" resultMap="productVOMap2">
+		select product_id,
+			   product_name,
+			   category_id,
+			   root_category_id,
+			   sold_num,
+			   product_status,
+			   content,
+			   create_time,
+			   update_time
+		from product
+		where product_name like #{kw}
+			limit #{start},#{limit}
+	</select>
+
+	<select id="selectBrandByKeyWord" resultSets="java.util.List" resultType="String">
+		select DISTINCT brand
+		from product_params
+		where product_id
+				  in (
+				  select product_id
+				  from product
+				  where product_name like #{kw}
+			  )
 	</select>
 
 

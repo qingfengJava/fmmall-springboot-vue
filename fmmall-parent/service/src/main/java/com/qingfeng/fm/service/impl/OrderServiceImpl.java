@@ -90,7 +90,7 @@ public class OrderServiceImpl implements OrderService {
                 String itemId = System.currentTimeMillis() + "" + (new Random().nextInt(89999) + 10000);
                 OrderItem orderItem = new OrderItem(itemId, orderId, sc.getProductId(), sc.getProductName(), sc.getProductImg(), sc.getSkuId(),
                         sc.getSkuName(), new BigDecimal(sc.getSellPrice()), cnum, new BigDecimal(sc.getSellPrice() * cnum), new Date(), new Date(), 0);
-                int m = orderItemMapper.insert(orderItem);
+                orderItemMapper.insert(orderItem);
             }
 
             //5、扣减库存：根据套餐Id修改套餐库存量

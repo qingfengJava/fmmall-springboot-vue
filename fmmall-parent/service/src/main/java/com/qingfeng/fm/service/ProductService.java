@@ -30,4 +30,36 @@ public interface ProductService {
      * @return
      */
     public ResultVO getProductParamsById(String productId);
+
+    /***
+     * 按照三级分类的id分页查询此分类下的商品信息
+     * @param categoryId
+     * @param pageNum
+     * @param limit
+     * @return
+     */
+    public ResultVO getProductsByCategoryId(int categoryId,int pageNum,int limit);
+
+    /**
+     * 根据类别Id，查询类别对应的品牌
+     * @param categoryId
+     * @return
+     */
+    public ResultVO listBrands(int categoryId);
+
+    /**
+     * 根据嘎UN就爱你自i，分页搜索商品信息
+     * @param kw
+     * @param pageNum
+     * @param limit
+     * @return
+     */
+    public ResultVO searchProduct(String kw,int pageNum,int limit);
+
+    /**
+     * 根据搜索关键字，查询类别对应的品牌
+     * @param kw
+     * @return
+     */
+    public ResultVO listBrands(String kw);
 }
