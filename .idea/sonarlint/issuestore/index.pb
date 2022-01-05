@@ -381,3 +381,7 @@ Hfmmall-parent/common/src/main/java/com/qingfeng/fm/utils/PageHelper.java,c\9\c
 `fmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/ProductCommentsServiceImpl.java,5\8\58b7744b5fe0255baa77a5874db7806c07a7438d
 ‡
 Wfmmall-parent/service/src/main/java/com/qingfeng/fm/service/ProductCommentsService.java,b\c\bc805a2096dea292253e5a93909e4b97a3576ab3
+|
+Lfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductSkuMapper.java,d\2\d2413b6cc74444d7dbd7c7cadb93ceca70f7b3fd
+†
+Vfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/OrderServiceImpl.java,a\9\a9b89069ae10d64244fa694decd7dc28963779a8
