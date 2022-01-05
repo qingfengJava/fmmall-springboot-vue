@@ -90,6 +90,9 @@ public class OrderItem {
     @Column(name = "is_comment")
     private Integer isComment;
 
+    public OrderItem() {
+    }
+
     public OrderItem(String itemId, String orderId, String productId, String productName, String productImg, String skuId, String skuName, BigDecimal productPrice, Integer buyCounts, BigDecimal totalAmount, Date basketDate, Date buyTime, Integer isComment) {
         this.itemId = itemId;
         this.orderId = orderId;

@@ -4,11 +4,9 @@ import com.qingfeng.fm.dao.OrderItemMapper;
 import com.qingfeng.fm.dao.OrdersMapper;
 import com.qingfeng.fm.dao.ProductSkuMapper;
 import com.qingfeng.fm.dao.ShoppingCartMapper;
-import com.qingfeng.fm.entity.OrderItem;
-import com.qingfeng.fm.entity.Orders;
-import com.qingfeng.fm.entity.ProductSku;
-import com.qingfeng.fm.entity.ShoppingCartVO;
+import com.qingfeng.fm.entity.*;
 import com.qingfeng.fm.service.OrderService;
+import com.qingfeng.fm.utils.PageHelper;
 import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -161,5 +159,28 @@ public class OrderServiceImpl implements OrderService {
                 productSkuMapper.updateByPrimaryKey(productSku);
             }
         }
+    }
+
+    @Override
+    public ResultVO listOrder(String userId, String status, int pageNum, int limit) {
+        //1、分页查询
+        int start = (pageNum - 1)*limit;
+        List<OrdersVO> ordersVOS = ordersMapper.selectOrders(userId, status, start, limit);
+
+        //2、查询总记录数
+        Example example = new Example(Orders.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andLike("userId",userId);
+        if (status != null && !"".equals(status)){
+            criteria.andLike("status",status);
+        }
+        int count = ordersMapper.selectCountByExample(example);
+
+        //3、计算总页数
+        int pageCount = count%limit==0?count/limit:count/limit+1;
+        //4、封装数据
+        PageHelper<OrdersVO> pageHelper = new PageHelper<>(count, pageCount, ordersVOS);
+
+        return new ResultVO(ResStatus.OK,"SUCCESS",pageHelper);
     }
 }

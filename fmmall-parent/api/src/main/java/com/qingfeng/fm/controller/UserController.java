@@ -2,7 +2,7 @@ package com.qingfeng.fm.controller;
 
 import com.qingfeng.fm.entity.Users;
 import com.qingfeng.fm.service.UserService;
-import com.qingfeng.fm.utils.Base64Utils;
+import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -53,5 +53,11 @@ public class UserController {
     public ResultVO regist(@RequestBody Users user){
         ResultVO resultVO = userService.userResgit(user.getUsername(),user.getPassword());
         return resultVO;
+    }
+
+    @ApiOperation("校验token是否过期接口")
+    @GetMapping("/check")
+    public ResultVO userTokenCheck(@RequestHeader("token")String token){
+        return new ResultVO(ResStatus.OK,"success",null);
     }
 }

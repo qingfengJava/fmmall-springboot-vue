@@ -7,6 +7,8 @@ import com.qingfeng.fm.service.job.MyPayConfig;
 import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -74,8 +76,22 @@ public class OrderController {
 
     @ApiOperation("查询订单状态并返回")
     @GetMapping("/status/{oid}")
-    public ResultVO getOrderStatus(String orderId,@RequestHeader("token") String token){
+    public ResultVO getOrderStatus(@PathVariable("oid") String orderId,@RequestHeader("token") String token){
         ResultVO resultVO = orderService.getOrderById(orderId);
+        return resultVO;
+    }
+
+    @ApiOperation("根据用户Id查询订单信息返回")
+    @GetMapping("/list")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "string",name = "userId",value = "用户Id",required = true),
+            @ApiImplicitParam(paramType = "string",name = "status",value = "订单状态",required = true),
+            @ApiImplicitParam(paramType = "int",name = "pageNum",value = "页码",required = true),
+            @ApiImplicitParam(paramType = "int",name = "limit",value = "每页条数",required = true)
+    })
+    public ResultVO list(@RequestHeader("token") String token,
+                         String userId,String status,int pageNum,int limit){
+        ResultVO resultVO = orderService.listOrder(userId, status, pageNum, limit);
         return resultVO;
     }
 }

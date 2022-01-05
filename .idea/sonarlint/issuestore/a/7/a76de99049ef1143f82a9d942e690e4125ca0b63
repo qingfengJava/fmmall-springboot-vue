@@ -1,8 +1,0 @@
-
-S
-java:S1854;"8Remove this useless assignment to local variable "resp".(¬Ø¯¡üÿÿÿÿ
-D
-java:S1481;")Remove this unused "resp" local variable.(¬Ø¯¡üÿÿÿÿ
-V	java:S125<"<This block of commented-out lines of code should be removed.(¶²§Àøÿÿÿÿ
-v
-java:S1488N"`Immediately return this expression instead of assigning it to the temporary variable "resultVO".(ºÐÉÉ

@@ -42,4 +42,14 @@ public interface OrderService {
      * @param orderId
      */
     public void closeOrder(String orderId);
+
+    /**
+     * 根据用户Id查询订单信息
+     * @param userId
+     * @param status
+     * @param pageNum
+     * @param limit
+     * @return
+     */
+    public ResultVO listOrder(String userId,String status,int pageNum,int limit);
 }
