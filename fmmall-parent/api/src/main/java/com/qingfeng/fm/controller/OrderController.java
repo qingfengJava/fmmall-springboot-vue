@@ -52,7 +52,7 @@ public class OrderController {
                 //交易类型
                 data.put("trade_type","NATIVE");
                 //设置支付完成时的回调方法接口
-                data.put("notify_url","http://ytao01.free.idcfengye.com/pay/callback");
+                data.put("notify_url","http://47.108.28.239:8080/pay/callback");
 
                 //订单保存成功：微信支付：申请支付链接
                 WXPay wxPay = new WXPay(new MyPayConfig());

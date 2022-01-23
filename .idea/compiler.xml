@@ -15,12 +15,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api" target="11" />
-      <module name="beans" target="11" />
-      <module name="common" target="11" />
-      <module name="fmmall-parent" target="11" />
-      <module name="mapper" target="11" />
-      <module name="service" target="11" />
+      <module name="api" target="1.8" />
+      <module name="beans" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="fmmall-parent" target="1.8" />
+      <module name="mapper" target="1.8" />
+      <module name="service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

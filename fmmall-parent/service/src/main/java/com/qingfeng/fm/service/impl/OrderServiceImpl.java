@@ -9,6 +9,8 @@ import com.qingfeng.fm.service.OrderService;
 import com.qingfeng.fm.utils.PageHelper;
 import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -28,6 +30,7 @@ import java.util.*;
 @Service
 public class OrderServiceImpl implements OrderService {
 
+    private static final Logger log = LoggerFactory.getLogger(OrderServiceImpl.class);
     @Autowired
     private ShoppingCartMapper shoppingCartMapper;
     @Autowired
@@ -47,6 +50,8 @@ public class OrderServiceImpl implements OrderService {
     @Transactional
     @Override
     public Map<String, String> addOrder(String cids, Orders orders) {
+        log.info("add order begin...");
+
         Map<String, String> map = new HashMap<String, String>();
 
         //1、根据cids查询当前订单中关联的购物车记录详情（包括库存）
@@ -69,6 +74,7 @@ public class OrderServiceImpl implements OrderService {
         }
 
         if (f) {
+            log.info("product stock is ok ... ");
             //3、表示库存充足----保存订单
             //a.userId   b.untitled  c.收货人信息：姓名、电话、地址
             //d.总价格   e.支付方式   f.订单的创建时间  g.订单初始状态
@@ -107,6 +113,7 @@ public class OrderServiceImpl implements OrderService {
             for (int cid : cidsList) {
                 shoppingCartMapper.deleteByPrimaryKey(cid);
             }
+            log.info("add order finished... ");
 
             map.put("orderId",orderId);
             map.put("productNames",untitled);
