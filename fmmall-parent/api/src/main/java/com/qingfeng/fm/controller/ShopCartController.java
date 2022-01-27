@@ -1,15 +1,17 @@
 package com.qingfeng.fm.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qingfeng.fm.entity.ShoppingCart;
+import com.qingfeng.fm.entity.Users;
 import com.qingfeng.fm.service.ShoppingCartService;
 import com.qingfeng.fm.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * 购物车控制层
@@ -26,12 +28,20 @@ public class ShopCartController {
 
     @Autowired
     private ShoppingCartService shoppingCartService;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @ApiOperation("用户添加购物车接口")
     @PostMapping("/add")
     public ResultVO addShoppingCart(@RequestBody ShoppingCart cart,
-                                    @RequestHeader("token") String token){
+                                    @RequestHeader("token") String token) throws JsonProcessingException {
         ResultVO resultVO = shoppingCartService.addShoppingCart(cart);
+        String userInfo = stringRedisTemplate.boundValueOps(token).get();
+        Users users = objectMapper.readValue(userInfo, Users.class);
+        System.out.println(users);
+
         return resultVO;
     }
 

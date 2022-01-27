@@ -1,0 +1,19 @@
+
+o
+java:S2293O"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ó¹›
+o
+java:S2293u"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ó¹›
+e
+java:S1192Y"JDefine a constant instead of duplicating this literal "productId" 3 times.(×„ÿÿÿÿÿ
+b
+java:S1192F"LDefine a constant instead of duplicating this literal "productImgs" 4 times.(¯¹Üä
+g
+java:S1192J"LDefine a constant instead of duplicating this literal "productSkus" 4 times.(Ÿ‰†õÿÿÿÿÿ
+c
+java:S11927"HDefine a constant instead of duplicating this literal "success" 6 times.(±®½õüÿÿÿÿ
+Y
+java:S1155^">Use isEmpty() to check whether the collection is empty or not.(µšÿ­úÿÿÿÿ
+U
+java:S1155‹">Use isEmpty() to check whether the collection is empty or not.(Œ¸Ø¸
+{
+java:S14887"`Immediately return this expression instead of assigning it to the temporary variable "resultVO".(±®½õüÿÿÿÿ

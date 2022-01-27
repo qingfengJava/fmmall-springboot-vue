@@ -1,6 +1,7 @@
 package com.qingfeng.fm.config;
 
 import com.qingfeng.fm.interceptor.CheckTokenInterceptor;
+import com.qingfeng.fm.interceptor.SetTimeInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -18,6 +19,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
     @Autowired
     private CheckTokenInterceptor checkTokenInterceptor;
+    @Autowired
+    private SetTimeInterceptor setTimeInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -26,5 +29,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .addPathPatterns("/orders/**")
                 .addPathPatterns("/useraddr/**")
                 .addPathPatterns("/user/check");
+        registry.addInterceptor(setTimeInterceptor)
+                .addPathPatterns("/**");
     }
 }

@@ -1,5 +1,7 @@
 package com.qingfeng.fm.service.impl;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qingfeng.fm.dao.UsersMapper;
 import com.qingfeng.fm.entity.Users;
 import com.qingfeng.fm.service.UserService;
@@ -10,6 +12,7 @@ import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -17,6 +20,7 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author 清风学Java
@@ -28,6 +32,10 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UsersMapper usersMapper;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+    private ObjectMapper objectMapper = new ObjectMapper();
 
     /**
      * 用户注册
@@ -105,6 +113,13 @@ public class UserServiceImpl implements UserService {
                         .signWith(SignatureAlgorithm.HS256, "QIANfeng6666") //设置加密方式和加密密码
                         .compact();
 
+                //当用户登录成功之后，以token为key 将用户信息保存到redis中
+                try {
+                    String userInfo = objectMapper.writeValueAsString(users.get(0));
+                    stringRedisTemplate.boundValueOps(token).set(userInfo,30, TimeUnit.MINUTES);
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
 
                 return new ResultVO(ResStatus.OK,token,users.get(0));
             }else {

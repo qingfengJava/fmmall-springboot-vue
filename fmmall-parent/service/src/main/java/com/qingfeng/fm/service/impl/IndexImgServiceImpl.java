@@ -56,8 +56,8 @@ public class IndexImgServiceImpl implements IndexImgService {
                 synchronized (this){
                     //第二次查询redis
                     String indexImgsStr = stringRedisTemplate.opsForValue().get("indexImgs");
-                    if (indexImgsStr == null){
                         //这1000个请求中，只有第一个请求再次查询redis时依然为null
+                        if (indexImgsStr == null){
 
                         //从redis中没有获取到轮播图信息，则查询数据库
                         //调用持久层，查询轮播图信息

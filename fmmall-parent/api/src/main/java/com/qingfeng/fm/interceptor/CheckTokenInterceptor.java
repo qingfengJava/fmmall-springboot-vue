@@ -3,7 +3,8 @@ package com.qingfeng.fm.interceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
-import io.jsonwebtoken.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 定义一个拦截器
@@ -25,6 +27,9 @@ import java.io.PrintWriter;
  */
 @Component
 public class CheckTokenInterceptor implements HandlerInterceptor {
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -42,7 +47,19 @@ public class CheckTokenInterceptor implements HandlerInterceptor {
             //提示先登录
             doResponse(response,resultVO);
         }else{
-            try {
+            //通过redis验证token
+            String userInfo = stringRedisTemplate.boundValueOps(token).get();
+            if (userInfo == null){
+                //未登录，状态码是20001
+                ResultVO resultVO = new ResultVO(ResStatus.LOGIN_FAIL_NOT, "请先登录！", null);
+                //提示先登录
+                doResponse(response,resultVO);
+            }else{
+                //验证通过
+                stringRedisTemplate.boundValueOps(token).expire(30, TimeUnit.MINUTES);
+            }
+
+           /** try {
                 //验证token
                 JwtParser parser = Jwts.parser();
                 //解析token的SingingKey必须和生成token时设置的密码一致
@@ -60,7 +77,7 @@ public class CheckTokenInterceptor implements HandlerInterceptor {
             } catch (Exception e) {
                 ResultVO resultVO = new ResultVO(ResStatus.LOGIN_FAIL_NOT, "请先登录！", null);
                 doResponse(response,resultVO);
-            }
+            }*/
         }
         return false;
     }

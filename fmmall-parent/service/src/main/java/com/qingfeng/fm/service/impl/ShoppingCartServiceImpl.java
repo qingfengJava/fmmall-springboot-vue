@@ -28,6 +28,10 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public ResultVO addShoppingCart(ShoppingCart cart) {
+
+
+
+
         cart.setCartTime(sdf.format(new Date()));
         int i = shoppingCartMapper.insert(cart);
         if (i > 0){
