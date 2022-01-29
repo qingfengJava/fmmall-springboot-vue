@@ -20,6 +20,13 @@
     </properties>
 
     <dependencies>
+        <!-- 分布式锁框架 Redisson -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
         <!-- 添加spring data redis 依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
