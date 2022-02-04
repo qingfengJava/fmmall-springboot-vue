@@ -57,6 +57,12 @@ public interface ProductMapper extends GeneralDao<Product> {
                                                   @Param("limit") int limit);
 
     /**
+     * 查询全部的商品信息
+     * @return
+     */
+    public List<ProductVO> selectProducts();
+
+    /**
      * 根据搜索关键字查询相关商品的品牌列表
      * @param kw
      * @return

@@ -128,5 +128,19 @@
 			  )
 	</select>
 
+    <select id="selectProducts" resultMap="productVOMap2">
+
+		select product_id,
+			   product_name,
+			   category_id,
+			   root_category_id,
+			   sold_num,
+			   product_status,
+			   content,
+			   create_time,
+			   update_time
+		from product
+	</select>
+
 
 </mapper>

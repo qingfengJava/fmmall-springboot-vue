@@ -20,6 +20,12 @@
     </properties>
 
     <dependencies>
+        <!-- ES依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+
         <!-- 分布式锁框架 Redisson -->
         <dependency>
             <groupId>org.redisson</groupId>
