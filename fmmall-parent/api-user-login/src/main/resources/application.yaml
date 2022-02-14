@@ -1,0 +1,20 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: api-user-login
+  redis:
+    host: 47.108.28.239
+    password: 123456
+    port: 6379
+    database: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://qingfeng:123456@localhost:8761/eureka
+
+## 开启熔断器机制
+feign:
+  hystrix:
+    enabled: true

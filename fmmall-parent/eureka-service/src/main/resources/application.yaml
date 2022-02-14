@@ -1,0 +1,24 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+  ## 设置SpringSecurity的密码安全性验证
+  security:
+    user:
+      name: qingfeng
+      password: 123456
+
+eureka:
+  client:
+
+    ## ip 就是服务注册中心服务器的ip
+    ## port 就是服务注册与发现中心设置的port
+    service-url: # eureka server服务注册中心的地址  暴露服务地址
+      defaultZone: http://localhost:8761/eureka
+    ## 设置服务注册与发现中心是否注册到其他的eureka（是否为集群搭建）
+    register-with-eureka: false
+    ## 设置服务注册与发现中心是否作为服务进行注册
+    fetch-registry: false
