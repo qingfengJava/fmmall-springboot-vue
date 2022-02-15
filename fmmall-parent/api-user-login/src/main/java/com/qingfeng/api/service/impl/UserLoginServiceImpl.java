@@ -41,9 +41,9 @@ public class UserLoginServiceImpl implements UserLoginService {
      * @return
      */
     @Override
-    public ResultVO checkLogin(String username, String password) {
+    public ResultVO checkLogin(String name, String password) {
         //1、调用user-check 服务 根据用户名查询用户信息
-        Users user = userCheckClient.check(username);
+        Users user = userCheckClient.check(name);
         //2、进行用户信息校验
         if (user == null) {
             return new ResultVO(10001, "login fail ...", null);
@@ -56,7 +56,7 @@ public class UserLoginServiceImpl implements UserLoginService {
                 //使用JWT规则生成token字符串
                 JwtBuilder builder = Jwts.builder();
 
-                String token = builder.setSubject(username) //主题，就是token中携带的数据
+                String token = builder.setSubject(name) //主题，就是token中携带的数据
                         .setIssuedAt(new Date()) //设置token的生成时间
                         .setId(user.getUserId() + "") //设置用户id为token id
                         .setExpiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 1000)) //设置token的过期时间

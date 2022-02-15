@@ -21,6 +21,7 @@
         <module>service</module>
         <module>api</module>
 
+        <!-- 相关微服务 -->
         <module>api-user-login</module>
         <module>user-check</module>
     </modules>

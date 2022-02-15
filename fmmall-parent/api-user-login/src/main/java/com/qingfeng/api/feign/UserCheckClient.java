@@ -4,6 +4,7 @@ import com.qingfeng.api.feign.fallback.UserCheckClientFallback;
 import com.qingfeng.fm.beans.Users;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author 清风学Java
@@ -19,5 +20,5 @@ public interface UserCheckClient{
      * @return
      */
     @GetMapping("user/check")
-    public Users check(String username);
+    public Users check(@RequestParam("name") String name);
 }

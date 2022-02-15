@@ -1,0 +1,10 @@
+
+Q	java:S125%"<This block of commented-out lines of code should be removed.(§Ç½¹
+e
+java:S1192+"JDefine a constant instead of duplicating this literal "productId" 4 times.(×„ÿÿÿÿÿ
+^
+java:S1192G"IDefine a constant instead of duplicating this literal "commType" 3 times.(ªÓv
+{
+java:S14885"`Immediately return this expression instead of assigning it to the temporary variable "resultVO".(ÊÊ‹Êıÿÿÿÿ
+u
+java:S1488c"_Immediately return this expression instead of assigning it to the temporary variable "success".(©ÓµÍ

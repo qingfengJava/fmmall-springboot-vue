@@ -5,7 +5,7 @@ spring:
   application:
     name: user-check
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     ## 如果后端项目服务器和数据库服务器不在同一台主机，则需要修改localhost为数据库服务器的ip地址
     url: jdbc:mysql://localhost:3306/fm-shop?rewriteBatchedStatements=true&useSSL=true&serverTimezone=GMT%2B8
     username: root
