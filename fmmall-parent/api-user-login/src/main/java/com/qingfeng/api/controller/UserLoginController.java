@@ -14,16 +14,15 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @CrossOrigin
-@RequestMapping("/user")
 public class UserLoginController {
 
     @Autowired
     private UserLoginService userLoginService;
 
-    @GetMapping("/login")
+    @GetMapping("/user/login")
     public ResultVO login(@RequestParam(value = "username") String name,
-                          @RequestParam(value = "password") String password){
-        ResultVO resultVO = userLoginService.checkLogin(name, password);
+                          @RequestParam(value = "password") String pwd){
+        ResultVO resultVO = userLoginService.checkLogin(name, pwd);
         return resultVO;
     }
 }

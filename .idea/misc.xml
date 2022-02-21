@@ -14,6 +14,8 @@
         <option value="$PROJECT_DIR$/fmmall-parent/eureka-service/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/api-user-login/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/user-check/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/api-user-regist/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/user-save/pom.xml" />
       </list>
     </option>
   </component>

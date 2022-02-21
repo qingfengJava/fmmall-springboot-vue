@@ -11,9 +11,9 @@ public interface UserLoginService {
 
     /**
      * 用户登录
-     * @param username 用户名
-     * @param password 密码
+     * @param name 用户名
+     * @param pwd 密码
      * @return
      */
-    public ResultVO checkLogin(String username, String password);
+    public ResultVO checkLogin(String name, String pwd);
 }

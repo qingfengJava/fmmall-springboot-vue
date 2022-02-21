@@ -2,7 +2,7 @@ package com.qingfeng.api.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qingfeng.api.feign.UserCheckClient;
+import com.qingfeng.api.service.feign.UserCheckClient;
 import com.qingfeng.api.service.UserLoginService;
 import com.qingfeng.fm.beans.Users;
 import com.qingfeng.fm.utils.MD5Utils;
@@ -41,7 +41,7 @@ public class UserLoginServiceImpl implements UserLoginService {
      * @return
      */
     @Override
-    public ResultVO checkLogin(String name, String password) {
+    public ResultVO checkLogin(String name, String pwd) {
         //1、调用user-check 服务 根据用户名查询用户信息
         Users user = userCheckClient.check(name);
         //2、进行用户信息校验
@@ -49,7 +49,7 @@ public class UserLoginServiceImpl implements UserLoginService {
             return new ResultVO(10001, "login fail ...", null);
         } else {
             //校验密码
-            String md5Pwd = MD5Utils.md5(password);
+            String md5Pwd = MD5Utils.md5(pwd);
             if (md5Pwd.equals(user.getPassword())) {
                 //如果登录验证成功，则需要生成令牌token（token就是按照特定规则生成的字符串）
                 //String token = Base64Utils.encode(username+123456);

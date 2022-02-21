@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.6</version>
+        <version>2.4.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -23,7 +23,9 @@
 
         <!-- 相关微服务 -->
         <module>api-user-login</module>
+        <module>api-user-regist</module>
         <module>user-check</module>
+        <module>user-save</module>
     </modules>
     <packaging>pom</packaging>
 

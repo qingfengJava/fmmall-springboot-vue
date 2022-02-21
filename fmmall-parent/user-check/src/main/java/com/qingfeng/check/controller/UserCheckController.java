@@ -5,7 +5,6 @@ import com.qingfeng.fm.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,7 +20,7 @@ public class UserCheckController {
     private UserCheckService userCheckService;
 
     @GetMapping("/check")
-    public Users check(@RequestParam("name") String username){
+    public Users check(String username){
         return userCheckService.queryUser(username);
     }
 }
