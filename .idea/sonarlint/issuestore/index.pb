@@ -21,8 +21,6 @@ Lfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductImgMapper.java,8
 Ofmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductParamsMapper.java,3\5\35378533e78906e80668ac6d548fc9232c04f812
 y
 Ifmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductMapper.java,3\7\37befc2feeab9904b8a4170d259fce65bf9cf6ab
-~
-Nfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ShoppingCartMapper.java,f\b\fb4fcfcd5f8d93440c1e91bb2160044baea8ad7b
 |
 Lfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ProductSkuMapper.java,d\2\d2413b6cc74444d7dbd7c7cadb93ceca70f7b3fd
 s
@@ -37,8 +35,6 @@ Vfmmall-parent/service/src/main/java/com/qingfeng/fm/service/config/RedissonConf
 Yfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/CategoryServiceImpl.java,2\2\22750731207853c2e8d737bd203988794934d91f
 â
 Yfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/IndexImgServiceImpl.java,7\e\7e3288c4deb6189614375c06ecb2f96b6585bd66
-Ü
-Vfmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/OrderServiceImpl.java,a\9\a9b89069ae10d64244fa694decd7dc28963779a8
 ê
 `fmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/ProductCommentsServiceImpl.java,5\8\58b7744b5fe0255baa77a5874db7806c07a7438d
 à
@@ -91,10 +87,6 @@ v
 F.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml,0\1\010dea03000301f90ac79b776560baf825dfcdaf
 w
 Gfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductVO.java,8\b\8bc2ded42b9be162465344979381469ee1ca042e
-x
-Hfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ProductSku.java,7\3\7367b3906a1d26c4222fece80992afd037585fbf
-|
-Lfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ShoppingCartVO.java,f\9\f9dd2e35fb1318baa72221bd61acd3376cac17d8
 m
 =.idea/libraries/Maven__io_reactivex_rxjava2_rxjava_2_2_21.xml,e\0\e0b2bc83bcca7ca17514c1f84d59fd613e02c03b
 z
@@ -156,8 +148,6 @@ Nfmmall-parent/api/src/main/java/com/qingfeng/fm/websocket/WebSocketServer.java
 ~
 Nfmmall-parent/api/src/main/java/com/qingfeng/fm/websocket/WebSocketConfig.java,b\e\be835ed6862d8c312348788c5d682f1703092e21
 
-Ofmmall-parent/api/src/main/java/com/qingfeng/fm/controller/OrderController.java,a\7\a76de99049ef1143f82a9d942e690e4125ca0b63
-
 Ofmmall-parent/api/src/main/java/com/qingfeng/fm/controller/IndexController.java,c\4\c44a18aa627645bfdf06739dd145c4d614c836a1
 l
 <.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml,b\c\bc4d7689d507cefc90ec6bce85360780547d4f48
@@ -207,8 +197,6 @@ e
 5.idea/libraries/Maven__joda_time_joda_time_2_10_4.xml,b\f\bf368393193b3eb0e83fb1c448116cc099e3dab3
 ]
 -.idea/libraries/Maven__junit_junit_4_13_2.xml,5\4\54f4510b91c2683595ce2e8f36b90b301f51d8d3
-t
-Dfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Orders.java,6\f\6f4c413150c5bf2adafeb439102cfa3722b4558d
 d
 4.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml,6\2\6284eecedd2d85fb3913164f96df4582210062ba
 i
@@ -359,8 +347,6 @@ p
 @.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml,d\6\d6dd28d80a594f25d2688b6b38b06f2130ee2760
 n
 >.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml,5\4\54d49c19c9a2fc574a0026c1f132c9dca3379b7e
-s
-Cfmmall-parent/common/src/main/java/com/qingfeng/fm/beans/Users.java,e\8\e86aff20c4fb41b5a57aac94dc27b37dbdd7a378
 b
 2.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml,3\7\3753dd4e22974a6308070e54fee9a36a92530b6b
 p
@@ -407,8 +393,6 @@ d
 4.idea/libraries/Maven__commons_io_commons_io_2_2.xml,3\a\3a77908e815ec75d6967a4cbba5210398083f667
 t
 D.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml,2\8\28add3d17df75cefbfe3cdbad9c90e1e860567f2
-I
-fmmall-parent/api/pom.xml,8\7\8786444947ada3db3168d0c5c977dff3119a76f6
 ç
 ]fmmall-parent/api-user-login/src/test/java/com/qingfeng/api/ApiUserLoginApplicationTests.java,4\d\4dd2a48defb226faffea520cc430c0146f90e7ce
 K
@@ -425,3 +409,15 @@ Ufmmall-parent/service/src/main/java/com/qingfeng/fm/service/impl/UserServiceImp
 Wfmmall-parent/user-check/src/main/java/com/qingfeng/check/service/UserCheckService.java,e\9\e9f0676721f42a164239495261d1fc34191d93bc
 ê
 `fmmall-parent/user-check/src/main/java/com/qingfeng/check/service/impl/UserCheckServiceImpl.java,3\c\3c0590258b84809cb47f00f33efb16cbda371a19
+~
+Nfmmall-parent/mapper/src/main/java/com/qingfeng/fm/dao/ShoppingCartMapper.java,f\b\fb4fcfcd5f8d93440c1e91bb2160044baea8ad7b
+s
+Cfmmall-parent/common/src/main/java/com/qingfeng/fm/beans/Users.java,e\8\e86aff20c4fb41b5a57aac94dc27b37dbdd7a378
+I
+fmmall-parent/api/pom.xml,8\7\8786444947ada3db3168d0c5c977dff3119a76f6
+
+Ofmmall-parent/api/src/main/java/com/qingfeng/fm/controller/OrderController.java,a\7\a76de99049ef1143f82a9d942e690e4125ca0b63
+|
+Lfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/ShoppingCartVO.java,f\9\f9dd2e35fb1318baa72221bd61acd3376cac17d8
+t
+Dfmmall-parent/beans/src/main/java/com/qingfeng/fm/entity/Orders.java,6\f\6f4c413150c5bf2adafeb439102cfa3722b4558d

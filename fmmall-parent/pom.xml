@@ -24,8 +24,12 @@
         <!-- 相关微服务 -->
         <module>api-user-login</module>
         <module>api-user-regist</module>
+        <module>api-order-submit</module>
+        <module>stock-query</module>
         <module>user-check</module>
         <module>user-save</module>
+        <module>orderitem-add</module>
+        <module>stock-update</module>
     </modules>
     <packaging>pom</packaging>
 

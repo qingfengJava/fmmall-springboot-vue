@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/api/api.iml" filepath="$PROJECT_DIR$/fmmall-parent/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/api-order-submit/api-order-submit.iml" filepath="$PROJECT_DIR$/fmmall-parent/api-order-submit/api-order-submit.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/api-user-login/api-user-login.iml" filepath="$PROJECT_DIR$/fmmall-parent/api-user-login/api-user-login.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/api-user-regist/api-user-regist.iml" filepath="$PROJECT_DIR$/fmmall-parent/api-user-regist/api-user-regist.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/beans/beans.iml" filepath="$PROJECT_DIR$/fmmall-parent/beans/beans.iml" />
@@ -10,7 +11,12 @@
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/fmmall-parent/eureka-service/eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/fmmall-parent.iml" filepath="$PROJECT_DIR$/fmmall-parent/fmmall-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/mapper/mapper.iml" filepath="$PROJECT_DIR$/fmmall-parent/mapper/mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/order-add/order-add.iml" filepath="$PROJECT_DIR$/fmmall-parent/order-add/order-add.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/orderitem-add/orderitem-add.iml" filepath="$PROJECT_DIR$/fmmall-parent/orderitem-add/orderitem-add.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/service/service.iml" filepath="$PROJECT_DIR$/fmmall-parent/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/shopcart-del/shopcart-del.iml" filepath="$PROJECT_DIR$/fmmall-parent/shopcart-del/shopcart-del.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/stock-query/stock-query.iml" filepath="$PROJECT_DIR$/fmmall-parent/stock-query/stock-query.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/stock-update/stock-update.iml" filepath="$PROJECT_DIR$/fmmall-parent/stock-update/stock-update.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/user-check/user-check.iml" filepath="$PROJECT_DIR$/fmmall-parent/user-check/user-check.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/user-save/user-save.iml" filepath="$PROJECT_DIR$/fmmall-parent/user-save/user-save.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/基于SpringCloud的锋迷商城项目-后端.iml" filepath="$PROJECT_DIR$/.idea/基于SpringCloud的锋迷商城项目-后端.iml" />

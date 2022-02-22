@@ -135,6 +135,7 @@ public class OrderServiceImpl implements OrderService {
                     }
 
                     //5、扣减库存：根据套餐Id修改套餐库存量
+                    List<ProductSku> skus = new ArrayList<>();
                     for (ShoppingCartVO sc : list) {
                         String skuId = sc.getSkuId();
                         int newStock = sc.getSkuStock() - Integer.parseInt(sc.getCartNum());
@@ -142,6 +143,10 @@ public class OrderServiceImpl implements OrderService {
                         ProductSku productSku = new ProductSku();
                         productSku.setSkuId(skuId);
                         productSku.setStock(newStock);
+                        skus.add(productSku);
+                    }
+
+                    for (ProductSku productSku : skus) {
                         //根据主键来修改属性值
                         int k = productSkuMapper.updateByPrimaryKeySelective(productSku);
                     }

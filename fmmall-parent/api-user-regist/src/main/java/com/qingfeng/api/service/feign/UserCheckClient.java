@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version 1.0.0
  * @date 2022/2/20
  */
-@FeignClient(value = "user-check" , fallback = UserCheckClientFallback.class)
+@FeignClient(value = "user-check",fallback = UserCheckClientFallback.class)
 public interface UserCheckClient {
 
     /**
-     * 查询用户是否存在
+     * 调用user-check服务的check方法
      * @param username
      * @return
      */

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/fmmall-parent/api-order-submit/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/api-user-login/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/api-user-regist/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/api/src/main/java" charset="UTF-8" />
@@ -8,7 +9,12 @@
     <file url="file://$PROJECT_DIR$/fmmall-parent/common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/eureka-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/mapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/order-add/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/orderitem-add/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/shopcart-del/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/stock-query/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/stock-update/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/user-check/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/user-save/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

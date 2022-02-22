@@ -20,7 +20,7 @@ public class UserLoginController {
     private UserLoginService userLoginService;
 
     @GetMapping("/user/login")
-    public ResultVO login(@RequestParam(value = "username") String name,
+    public ResultVO login(@RequestParam("username") String name,
                           @RequestParam(value = "password") String pwd){
         ResultVO resultVO = userLoginService.checkLogin(name, pwd);
         return resultVO;

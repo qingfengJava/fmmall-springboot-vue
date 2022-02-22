@@ -20,7 +20,7 @@ public class UserCheckClientFallback implements UserCheckClient {
     @Override
     public Users check(String username) {
         //如果调用user-check服务失败，则返回null
-        System.out.println("user/check-----服务降级");
+        System.out.println("user-check ~~~~~~~~~~~~服务降级");
         return null;
     }
 }

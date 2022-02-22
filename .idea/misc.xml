@@ -16,6 +16,13 @@
         <option value="$PROJECT_DIR$/fmmall-parent/user-check/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/api-user-regist/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/user-save/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/stock-query/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/orderitem-add/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/stock-update/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/shopcart-del/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/order-submit/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/api-order-submit/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/order-add/pom.xml" />
       </list>
     </option>
   </component>

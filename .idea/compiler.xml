@@ -7,20 +7,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-service" />
-        <module name="api-user-login" />
-        <module name="common" />
         <module name="user-save" />
-        <module name="service" />
-        <module name="beans" />
+        <module name="shopcart-del" />
+        <module name="stock-query" />
+        <module name="api-order-submit" />
+        <module name="orderitem-add" />
         <module name="api-user-regist" />
         <module name="mapper" />
+        <module name="eureka-service" />
+        <module name="api-user-login" />
+        <module name="stock-update" />
+        <module name="common" />
+        <module name="order-add" />
+        <module name="service" />
+        <module name="beans" />
         <module name="api" />
         <module name="user-check" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="api" target="1.8" />
+      <module name="api-order-submit" target="1.8" />
       <module name="api-user-login" target="1.8" />
       <module name="api-user-regist" target="1.8" />
       <module name="beans" target="1.8" />
@@ -28,7 +35,12 @@
       <module name="eureka-service" target="1.8" />
       <module name="fmmall-parent" target="1.8" />
       <module name="mapper" target="1.8" />
+      <module name="order-add" target="1.8" />
+      <module name="orderitem-add" target="1.8" />
       <module name="service" target="1.8" />
+      <module name="shopcart-del" target="1.8" />
+      <module name="stock-query" target="1.8" />
+      <module name="stock-update" target="1.8" />
       <module name="user-check" target="1.8" />
       <module name="user-save" target="1.8" />
     </bytecodeTargetLevel>
@@ -36,13 +48,19 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
+      <module name="api-order-submit" options="-parameters" />
       <module name="api-user-login" options="-parameters" />
       <module name="api-user-regist" options="-parameters" />
       <module name="beans" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
       <module name="mapper" options="-parameters" />
+      <module name="order-add" options="-parameters" />
+      <module name="orderitem-add" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="shopcart-del" options="-parameters" />
+      <module name="stock-query" options="-parameters" />
+      <module name="stock-update" options="-parameters" />
       <module name="user-check" options="-parameters" />
       <module name="user-save" options="-parameters" />
     </option>
