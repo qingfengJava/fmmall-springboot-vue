@@ -10,7 +10,13 @@
     <file url="file://$PROJECT_DIR$/fmmall-parent/eureka-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/mapper/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/order-add/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/order-close/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/order-status-update/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/order-timeout-cancle/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/order-timeout-query/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/orderitem-add/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/orderitem-query/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/product-sku-query/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/shopcart-del/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/stock-query/src/main/java" charset="UTF-8" />

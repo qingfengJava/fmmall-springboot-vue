@@ -1,0 +1,6 @@
+
+m
+java:S3776""RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(§³Ã”üÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(´‹¹öþÿÿÿÿ
+7
+java:S1643G"Use a StringBuilder instead.(×ŽšØüÿÿÿÿ

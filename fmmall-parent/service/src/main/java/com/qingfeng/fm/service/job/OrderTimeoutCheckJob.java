@@ -39,11 +39,11 @@ public class OrderTimeoutCheckJob {
             Example example = new Example(Orders.class);
             Example.Criteria criteria = example.createCriteria();
             criteria.andEqualTo("status", "1");
-
             Date time = new Date(System.currentTimeMillis() - 30 * 60 * 1000);
             //生成订单的时间比当前时间减去半个小时还小，说明是超时订单
             criteria.andLessThan("createTime", time);
             List<Orders> orders = ordersMapper.selectByExample(example);
+
             //2、访问微信平台接口，确认当前订单最终的支付状态
             for (Orders order : orders) {
                 HashMap<String, String> params = new HashMap<String, String>();
@@ -69,6 +69,5 @@ public class OrderTimeoutCheckJob {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }

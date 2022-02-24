@@ -23,6 +23,12 @@
         <option value="$PROJECT_DIR$/fmmall-parent/order-submit/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/api-order-submit/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/order-add/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/order-timeout-query/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/order-status-update/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/order-close/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/order-timeout-cancle/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/orderitem-query/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/product-sku-query/pom.xml" />
       </list>
     </option>
   </component>

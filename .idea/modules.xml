@@ -12,7 +12,13 @@
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/fmmall-parent.iml" filepath="$PROJECT_DIR$/fmmall-parent/fmmall-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/mapper/mapper.iml" filepath="$PROJECT_DIR$/fmmall-parent/mapper/mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/order-add/order-add.iml" filepath="$PROJECT_DIR$/fmmall-parent/order-add/order-add.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/order-close/order-close.iml" filepath="$PROJECT_DIR$/fmmall-parent/order-close/order-close.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/order-status-update/order-status-update.iml" filepath="$PROJECT_DIR$/fmmall-parent/order-status-update/order-status-update.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/order-timeout-cancle/order-timeout-cancle.iml" filepath="$PROJECT_DIR$/fmmall-parent/order-timeout-cancle/order-timeout-cancle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/order-timeout-query/order-timeout-query.iml" filepath="$PROJECT_DIR$/fmmall-parent/order-timeout-query/order-timeout-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/orderitem-add/orderitem-add.iml" filepath="$PROJECT_DIR$/fmmall-parent/orderitem-add/orderitem-add.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/orderitem-query/orderitem-query.iml" filepath="$PROJECT_DIR$/fmmall-parent/orderitem-query/orderitem-query.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/product-sku-query/product-sku-query.iml" filepath="$PROJECT_DIR$/fmmall-parent/product-sku-query/product-sku-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/service/service.iml" filepath="$PROJECT_DIR$/fmmall-parent/service/service.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/shopcart-del/shopcart-del.iml" filepath="$PROJECT_DIR$/fmmall-parent/shopcart-del/shopcart-del.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/stock-query/stock-query.iml" filepath="$PROJECT_DIR$/fmmall-parent/stock-query/stock-query.iml" />

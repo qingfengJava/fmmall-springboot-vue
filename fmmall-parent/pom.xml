@@ -28,8 +28,12 @@
         <module>stock-query</module>
         <module>user-check</module>
         <module>user-save</module>
+        <module>order-add</module>
+        <module>shopcart-del</module>
         <module>orderitem-add</module>
         <module>stock-update</module>
+        <module>order-timeout-query</module>
+        <module>order-close</module>
     </modules>
     <packaging>pom</packaging>
 

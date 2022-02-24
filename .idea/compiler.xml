@@ -7,22 +7,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="orderitem-query" />
+        <module name="product-sku-query" />
         <module name="user-save" />
         <module name="shopcart-del" />
+        <module name="order-status-update" />
         <module name="stock-query" />
         <module name="api-order-submit" />
         <module name="orderitem-add" />
         <module name="api-user-regist" />
         <module name="mapper" />
         <module name="eureka-service" />
+        <module name="order-timeout-cancle" />
         <module name="api-user-login" />
         <module name="stock-update" />
         <module name="common" />
         <module name="order-add" />
         <module name="service" />
         <module name="beans" />
+        <module name="order-timeout-query" />
         <module name="api" />
         <module name="user-check" />
+        <module name="order-close" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -36,7 +42,13 @@
       <module name="fmmall-parent" target="1.8" />
       <module name="mapper" target="1.8" />
       <module name="order-add" target="1.8" />
+      <module name="order-close" target="1.8" />
+      <module name="order-status-update" target="1.8" />
+      <module name="order-timeout-cancle" target="1.8" />
+      <module name="order-timeout-query" target="1.8" />
       <module name="orderitem-add" target="1.8" />
+      <module name="orderitem-query" target="1.8" />
+      <module name="product-sku-query" target="1.8" />
       <module name="service" target="1.8" />
       <module name="shopcart-del" target="1.8" />
       <module name="stock-query" target="1.8" />
@@ -56,7 +68,13 @@
       <module name="eureka-service" options="-parameters" />
       <module name="mapper" options="-parameters" />
       <module name="order-add" options="-parameters" />
+      <module name="order-close" options="-parameters" />
+      <module name="order-status-update" options="-parameters" />
+      <module name="order-timeout-cancle" options="-parameters" />
+      <module name="order-timeout-query" options="-parameters" />
       <module name="orderitem-add" options="-parameters" />
+      <module name="orderitem-query" options="-parameters" />
+      <module name="product-sku-query" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="shopcart-del" options="-parameters" />
       <module name="stock-query" options="-parameters" />
