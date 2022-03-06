@@ -1,0 +1,21 @@
+
+h
+java:S3776="RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(â¡â¿
+t
+java:S2142["^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+<
+java:S1481"&Remove this unused "i" local variable.(²ëÊ»
+5
+java:S2119ƒ"Save and re-use this "Random".(ÛÃºÖ
+=
+java:S2111…"!Use "BigDecimal.valueOf" instead.(áÏÐ©ÿÿÿÿÿ
+=
+java:S2111…"!Use "BigDecimal.valueOf" instead.(áÏÐ©ÿÿÿÿÿ
+B
+java:S1481—"&Remove this unused "k" local variable.(¾Šþúÿÿÿÿ
+7
+java:S1643m"Use a StringBuilder instead.(²‘ý½øÿÿÿÿ
+u
+java:S1488»"YImmediately return this expression instead of assigning it to the temporary variable "i".(£ºµ›øÿÿÿÿ
+V
+java:S2222V";Unlock this lock along all executions paths of this method.(½ãáûÿÿÿÿ

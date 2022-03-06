@@ -19,6 +19,13 @@
     </properties>
     <dependencies>
 
+        <!-- 添加zipkin依赖监控 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+            <version>2.0.2.RELEASE</version>
+        </dependency>
+
         <!-- beans -->
         <dependency>
             <groupId>com.qingfeng</groupId>

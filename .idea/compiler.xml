@@ -26,6 +26,7 @@
         <module name="service" />
         <module name="beans" />
         <module name="order-timeout-query" />
+        <module name="zipkin-server" />
         <module name="api" />
         <module name="user-check" />
         <module name="order-close" />
@@ -55,6 +56,7 @@
       <module name="stock-update" target="1.8" />
       <module name="user-check" target="1.8" />
       <module name="user-save" target="1.8" />
+      <module name="zipkin-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -81,6 +83,7 @@
       <module name="stock-update" options="-parameters" />
       <module name="user-check" options="-parameters" />
       <module name="user-save" options="-parameters" />
+      <module name="zipkin-server" options="-parameters" />
     </option>
   </component>
 </project>

@@ -29,6 +29,7 @@
         <option value="$PROJECT_DIR$/fmmall-parent/order-timeout-cancle/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/orderitem-query/pom.xml" />
         <option value="$PROJECT_DIR$/fmmall-parent/product-sku-query/pom.xml" />
+        <option value="$PROJECT_DIR$/fmmall-parent/zipkin-server/pom.xml" />
       </list>
     </option>
   </component>

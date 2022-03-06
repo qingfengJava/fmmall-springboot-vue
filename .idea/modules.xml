@@ -25,6 +25,7 @@
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/stock-update/stock-update.iml" filepath="$PROJECT_DIR$/fmmall-parent/stock-update/stock-update.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/user-check/user-check.iml" filepath="$PROJECT_DIR$/fmmall-parent/user-check/user-check.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/user-save/user-save.iml" filepath="$PROJECT_DIR$/fmmall-parent/user-save/user-save.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/zipkin-server/zipkin-server.iml" filepath="$PROJECT_DIR$/fmmall-parent/zipkin-server/zipkin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/基于SpringCloud的锋迷商城项目-后端.iml" filepath="$PROJECT_DIR$/.idea/基于SpringCloud的锋迷商城项目-后端.iml" />
     </modules>
   </component>
