@@ -459,8 +459,6 @@ Ufmmall-parent/order-add/src/main/java/com/qingfeng/order/service/OrderAddServic
 Yfmmall-parent/orderitem-add/src/main/java/com/qingfeng/orderitem/dao/OrderItemMapper.java,3\e\3eda02e97ab014b6b747aea64af8baf502b53c3f
 è
 _fmmall-parent/api-order-submit/src/main/java/com/qingfeng/api/service/feign/OrderAddClient.java,2\6\26a4a498af5b7f1f0de6689e282922681999288b
-ì
-cfmmall-parent/api-order-submit/src/main/java/com/qingfeng/api/controller/OrderSubmitController.java,5\6\56f748b2485bfac1cce10eee4770ed2429f8e7dd
 Ç
 Rfmmall-parent/stock-query/src/main/java/com/qingfeng/stock/dao/ShopCartMapper.java,6\0\6005cd06e525c875e18bcd1ac4f547fdcece60eb
 ê
@@ -549,8 +547,6 @@ hfmmall-parent/order-timeout-query/src/main/java/com/qingfeng/order/service/Orde
 tfmmall-parent/order-close/src/main/java/com/qingfeng/order/service/feigin/fallback/OrderItemQueryClientFallback.java,f\4\f4ceed1e0c26dee4399994370949f599bafa6905
 è
 _fmmall-parent/order-timeout-cancle/src/main/java/com/qingfeng/order/feign/OrderCloseClient.java,3\5\35c77a8844249e485cac8232f6af1982a986fd7d
-ñ
-ffmmall-parent/order-timeout-cancle/src/main/java/com/qingfeng/order/OrderTimeoutCancleApplication.java,b\3\b362cc59703bedc5a2f15773de07d73d6bba32b4
 î
 dfmmall-parent/order-timeout-query/src/main/java/com/qingfeng/order/OrderTimeoutQueryApplication.java,8\f\8fecc441f256412efd951c3d85c0dcbea6cd5c74
 û
@@ -583,8 +579,6 @@ Y
 sfmmall-parent/product-sku-query/src/main/java/com/qingfeng/product/sku/service/impl/ProductSkuQueryServiceImpl.java,9\d\9da5c1406f2616ed4eafb4676db0796e41add64f
 Y
 )fmmall-parent/order-status-update/pom.xml,6\9\69c08c039894d179ac6a94be56135caa89bd6dd4
-Z
-*fmmall-parent/order-timeout-cancle/pom.xml,1\4\14b518945d6e47dfcd51b1d514a2d6b49b2a65ff
 í
 bfmmall-parent/orderitem-query/src/test/java/com/qingfeng/order/OrderitemQueryApplicationTests.java,e\8\e8b62236f7f5df8b591e830fdfef7d6971a77c9f
 ç
@@ -615,12 +609,8 @@ ffmmall-parent/order-timeout-cancle/src/main/java/com/qingfeng/order/feign/Order
 ufmmall-parent/order-close/src/main/java/com/qingfeng/order/service/feigin/fallback/ProductSkuQueryClientFallback.java,b\7\b746bcfc8a78db8224361f6531c0beba6ec91b7d
 U
 %fmmall-parent/orderitem-query/pom.xml,c\5\c5456d3ee5049e26e335727ccc05c5d91c1d75e5
-ñ
-ffmmall-parent/order-timeout-cancle/src/main/java/com/qingfeng/order/service/OrderTimeoutCancleJob.java,c\c\cc0951a5b821abdd74c768e881c4b9d7d75c3331
 †
 pfmmall-parent/product-sku-query/src/main/java/com/qingfeng/product/sku/controller/ProductSkuQueryController.java,2\7\27eac730e088c627b01cb8684deeccfe3b622550
-ñ
-ffmmall-parent/order-timeout-cancle/src/main/java/com/qingfeng/order/feign/OrderStatusUpdateClient.java,2\f\2f2ddd1fca1d89f1e4e773cb4f75fc1fb875a77a
 õ
 kfmmall-parent/product-sku-query/src/test/java/com/qingfeng/product/sku/ProductSkuQueryApplicationTests.java,c\d\cd7184688fddc7af236fff699438616883d9ea3f
 ñ
@@ -761,8 +751,6 @@ v
 F.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_3_Final.xml,5\b\5b444c530cca0aff7bbc2b49494559f96270ea1e
 j
 :.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml,7\1\71784ecce834940886a922006aeb3db57fa9ebbb
-V
-&fmmall-parent/api-order-submit/pom.xml,4\3\4389162450a1a411338316b1d763e631cb2b6861
 o
 ?.idea/libraries/Maven__io_zipkin_java_zipkin_server_2_11_10.xml,f\9\f9b229a1e6de23e15e33d9c246e117178b4cb886
 k

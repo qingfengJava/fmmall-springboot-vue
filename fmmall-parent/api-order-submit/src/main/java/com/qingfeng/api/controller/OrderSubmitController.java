@@ -3,6 +3,7 @@ package com.qingfeng.api.controller;
 import com.github.wxpay.sdk.WXPay;
 import com.qingfeng.api.config.MyPayConfig;
 import com.qingfeng.api.service.OrderSubmitService;
+import com.qingfeng.api.service.impl.SendMsgToMq;
 import com.qingfeng.fm.beans.Orders;
 import com.qingfeng.fm.vo.ResStatus;
 import com.qingfeng.fm.vo.ResultVO;
@@ -24,6 +25,8 @@ public class OrderSubmitController {
 
     @Autowired
     private OrderSubmitService orderSubmitService;
+    @Autowired
+    private SendMsgToMq sendMsgToMq;
 
     @PostMapping("/add")
     public ResultVO add(String cids, @RequestBody Orders order){
@@ -57,6 +60,8 @@ public class OrderSubmitController {
                 orderInfo.put("payUrl","https://gitee.com/pjlwlcxy/projects");
                 resultVO = new ResultVO(ResStatus.OK,"提交订单成功！",orderInfo);
 
+                //当订单保存成功之后，将订单编号写入到死信队列 q1(ex6----key1)
+                sendMsgToMq.sendMsg(orderId);
             }else{
                 resultVO = new ResultVO(ResStatus.NO,"提交订单失败！",null);
             }

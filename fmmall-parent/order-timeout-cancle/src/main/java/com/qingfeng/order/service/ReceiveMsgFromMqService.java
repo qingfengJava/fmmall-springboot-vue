@@ -6,20 +6,25 @@ import com.qingfeng.order.config.MyPayConfig;
 import com.qingfeng.order.feign.OrderCloseClient;
 import com.qingfeng.order.feign.OrderStatusUpdateClient;
 import com.qingfeng.order.feign.OrderTimeoutQueryClient;
+import com.rabbitmq.client.Channel;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.annotation.RabbitHandler;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
  * @author 清风学Java
  * @version 1.0.0
- * @date 2022/2/24
+ * @date 2022/3/17
  */
-@Component
-public class OrderTimeoutCancleJob {
+@Service
+@RabbitListener(queues = "q2")
+public class ReceiveMsgFromMqService {
 
     @Autowired
     private OrderTimeoutQueryClient orderTimeoutQueryClient;
@@ -29,16 +34,14 @@ public class OrderTimeoutCancleJob {
     @Autowired
     private OrderCloseClient orderCloseClient;
 
-    //https://corn.qqe2.com
-    //@Scheduled(cron = "0/3 * * * * ?")
-    public void checkAndCancelOrder(){
+    @RabbitHandler
+    public void checkAndCancelOrder(String orderId, Channel channel, Message message) throws IOException {
         //1、查询超时的订单
         try {
-            //1、调用order-timeout-query  查询超过30min订单状态依然为待支付状态的订单
-            List<Orders> orders = orderTimeoutQueryClient.query();
-
-            //2、访问微信平台接口，确认当前订单最终的支付状态
-            for (Orders order : orders) {
+            //1、根据订单编号查询当前订单信息
+            //伪代码
+            Orders order = null;
+            if ("1".equals(order.getStatus())){
                 HashMap<String, String> params = new HashMap<String, String>();
                 params.put("out_trade_no", order.getOrderId());
                 Map<String, String> resp = wxPay.orderQuery(params);
@@ -62,9 +65,14 @@ public class OrderTimeoutCancleJob {
                     int k = orderCloseClient.close(order.getOrderId(), 1);
 
                 }
+            }else{
+                //手动ACK应答
+                channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
             }
         } catch (Exception e) {
             e.printStackTrace();
+            channel.basicNack(message.getMessageProperties().getDeliveryTag(), false,true);
+
         }
     }
 }

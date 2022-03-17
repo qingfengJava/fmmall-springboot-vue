@@ -15,6 +15,15 @@ spring:
     sampler:
       probability: 1
 
+# rabbitmq的配置
+  rabbitmq:
+    host: 47.108.28.239
+    port: 5672
+    virtual-host: host1
+    username: qingfeng
+    password: admin123
+
+
 eureka:
   client:
     service-url:
