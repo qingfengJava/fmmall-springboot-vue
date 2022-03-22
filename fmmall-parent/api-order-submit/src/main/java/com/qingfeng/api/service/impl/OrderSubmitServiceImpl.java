@@ -1,5 +1,6 @@
 package com.qingfeng.api.service.impl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.qingfeng.api.service.OrderSubmitService;
 import com.qingfeng.api.service.feign.OrderAddClient;
 import com.qingfeng.api.service.feign.OrderitemAddClient;
@@ -10,6 +11,7 @@ import com.qingfeng.fm.beans.ProductSku;
 import com.qingfeng.fm.beans.ShoppingCartVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -31,6 +33,8 @@ public class OrderSubmitServiceImpl implements OrderSubmitService {
     private ShopcartDelClient shopcartDelClient;
 
     @Override
+    @Transactional
+    @LcnTransaction
     public Map<String, String> addOrder(String cids, Orders order) {
         Map<String, String> map = null;
         //1、保存订单（校验库存）  order-add服务

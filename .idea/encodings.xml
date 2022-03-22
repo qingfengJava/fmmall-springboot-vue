@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/fmmall-parent/api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/beans/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/eureka-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/mapper/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/order-add/src/main/java" charset="UTF-8" />
@@ -21,6 +22,7 @@
     <file url="file://$PROJECT_DIR$/fmmall-parent/shopcart-del/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/stock-query/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/stock-update/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fmmall-parent/tx-manager/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/user-check/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/user-save/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fmmall-parent/zipkin-server/src/main/java" charset="UTF-8" />

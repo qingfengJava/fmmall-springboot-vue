@@ -1,0 +1,17 @@
+
+P
+java:S18549"5Remove this useless assignment to local variable "j".(«Æ—¡þÿÿÿÿ
+M
+java:S1854>"7Remove this useless assignment to local variable "map".(”Ÿ¹Í
+P
+java:S1854A"5Remove this useless assignment to local variable "k".(ŒË‹øÿÿÿÿÿ
+A
+java:S14819"&Remove this unused "j" local variable.(«Æ—¡þÿÿÿÿ
+>
+java:S1481>"(Remove this unused "map" local variable.(”Ÿ¹Í
+A
+java:S1481A"&Remove this unused "k" local variable.(ŒË‹øÿÿÿÿÿ
+o
+java:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì¼§ù
+^
+java:S2259,"CA "NullPointerException" could be thrown; "order" is nullable here.(ªµÌÚýÿÿÿÿ

@@ -7,29 +7,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="orderitem-query" />
         <module name="product-sku-query" />
         <module name="user-save" />
         <module name="shopcart-del" />
+        <module name="mapper" />
+        <module name="eureka-service" />
+        <module name="order-timeout-cancle" />
+        <module name="common" />
+        <module name="beans" />
+        <module name="zipkin-server" />
+        <module name="api" />
+        <module name="tx-manager" />
+        <module name="user-check" />
+        <module name="order-close" />
+        <module name="orderitem-query" />
         <module name="order-status-update" />
         <module name="stock-query" />
         <module name="api-order-submit" />
         <module name="orderitem-add" />
         <module name="api-user-regist" />
-        <module name="mapper" />
-        <module name="eureka-service" />
-        <module name="order-timeout-cancle" />
+        <module name="config-server" />
         <module name="api-user-login" />
         <module name="stock-update" />
-        <module name="common" />
         <module name="order-add" />
         <module name="service" />
-        <module name="beans" />
         <module name="order-timeout-query" />
-        <module name="zipkin-server" />
-        <module name="api" />
-        <module name="user-check" />
-        <module name="order-close" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -39,6 +41,7 @@
       <module name="api-user-regist" target="1.8" />
       <module name="beans" target="1.8" />
       <module name="common" target="1.8" />
+      <module name="config-server" target="1.8" />
       <module name="eureka-service" target="1.8" />
       <module name="fmmall-parent" target="1.8" />
       <module name="mapper" target="1.8" />
@@ -54,6 +57,7 @@
       <module name="shopcart-del" target="1.8" />
       <module name="stock-query" target="1.8" />
       <module name="stock-update" target="1.8" />
+      <module name="tx-manager" target="1.8" />
       <module name="user-check" target="1.8" />
       <module name="user-save" target="1.8" />
       <module name="zipkin-server" target="1.8" />
@@ -67,6 +71,7 @@
       <module name="api-user-regist" options="-parameters" />
       <module name="beans" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="eureka-service" options="-parameters" />
       <module name="mapper" options="-parameters" />
       <module name="order-add" options="-parameters" />
@@ -81,6 +86,7 @@
       <module name="shopcart-del" options="-parameters" />
       <module name="stock-query" options="-parameters" />
       <module name="stock-update" options="-parameters" />
+      <module name="tx-manager" options="-parameters" />
       <module name="user-check" options="-parameters" />
       <module name="user-save" options="-parameters" />
       <module name="zipkin-server" options="-parameters" />

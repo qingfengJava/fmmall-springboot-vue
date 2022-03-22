@@ -1,0 +1,15 @@
+
+P
+java:S18546"5Remove this useless assignment to local variable "j".(«Æ—¡þÿÿÿÿ
+M
+java:S1854;"7Remove this useless assignment to local variable "map".(”Ÿ¹Í
+W
+java:S1854>"5Remove this useless assignment to local variable "k".(ŒË‹øÿÿÿÿÿ8ñ¤ÑÙò/
+A
+java:S14816"&Remove this unused "j" local variable.(«Æ—¡þÿÿÿÿ
+>
+java:S1481;"(Remove this unused "map" local variable.(”Ÿ¹Í
+H
+java:S1481>"&Remove this unused "k" local variable.(ŒË‹øÿÿÿÿÿ8€¥ÑÙò/
+o
+java:S2293*"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì¼§ù

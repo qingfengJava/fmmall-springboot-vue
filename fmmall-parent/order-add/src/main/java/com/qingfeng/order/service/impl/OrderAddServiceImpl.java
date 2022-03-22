@@ -1,5 +1,6 @@
 package com.qingfeng.order.service.impl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.qingfeng.fm.entity.Orders;
 import com.qingfeng.fm.entity.ShoppingCartVO;
 import com.qingfeng.order.dao.OrdersMapper;
@@ -7,6 +8,7 @@ import com.qingfeng.order.service.OrderAddService;
 import com.qingfeng.order.service.feign.StockQueryClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
@@ -25,6 +27,8 @@ public class OrderAddServiceImpl implements OrderAddService {
     private OrdersMapper ordersMapper;
 
     @Override
+    @Transactional
+    @LcnTransaction
     public List<ShoppingCartVO> save(Orders order, String cids) {
         //1、校验库存
         //a、调用stock-query服务查询当前订单中包含的购物车信息

@@ -18,6 +18,19 @@
         <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
     </properties>
     <dependencies>
+
+        <!-- TC依赖 -->
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-tc</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-txmsg-netty</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+
         <!-- 添加zipkin依赖监控 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

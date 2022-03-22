@@ -1,11 +1,13 @@
 package com.qingfeng.orderitem.service.impl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.qingfeng.fm.entity.OrderItem;
 import com.qingfeng.fm.entity.ShoppingCartVO;
 import com.qingfeng.orderitem.dao.OrderItemMapper;
 import com.qingfeng.orderitem.service.OrderItemAddService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -24,6 +26,8 @@ public class OrderItemAddServiceImpl implements OrderItemAddService {
     private OrderItemMapper orderItemMapper;
 
     @Override
+    @Transactional
+    @LcnTransaction
     public int save(List<ShoppingCartVO> list, String orderId) {
         int count = 1;
         for (ShoppingCartVO sc : list) {

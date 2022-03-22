@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:  # 连接到git
+          uri: https://gitee.com/pjlwlcxy/fmmall-config.git
+          search-paths: files  # 文件在git里的哪一个目录中个
+          username: 2562777581@qq.com   # 用户名
+          password: 513812pjl@  # 密码
+eureka:  # 连接到eureka
+  client:
+    service-url:
+      defaultZone: http://qingfeng:123456@localhost:8761/eureka

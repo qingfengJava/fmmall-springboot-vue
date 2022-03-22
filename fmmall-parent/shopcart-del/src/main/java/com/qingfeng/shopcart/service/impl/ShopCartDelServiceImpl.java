@@ -1,9 +1,11 @@
 package com.qingfeng.shopcart.service.impl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.qingfeng.shopcart.dao.ShoppingCartMapper;
 import com.qingfeng.shopcart.service.ShopCartDelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author 清风学Java
@@ -17,6 +19,8 @@ public class ShopCartDelServiceImpl implements ShopCartDelService {
     private ShoppingCartMapper shoppingCartMapper;
 
     @Override
+    @Transactional
+    @LcnTransaction
     public int deleteShopCart(String cids) {
         int count = 1;
         String[] arr = cids.split(",");

@@ -24,3 +24,7 @@ eureka:
 mybatis:
   mapper-locations: classpath:mappers/*Mapper.xml
   type-aliases-package: com.qingfeng.fm.entity
+
+tx-lcn:
+  client:
+    manager-address: localhost:8070

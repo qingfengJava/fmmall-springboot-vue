@@ -1,5 +1,6 @@
 package com.qingfeng.order;
 
+import com.codingapi.txlcn.tc.config.EnableDistributedTransaction;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -16,6 +17,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableHystrix
+@EnableDistributedTransaction
 @MapperScan("com.qingfeng.order.dao")
 public class OrderAddApplication {
 

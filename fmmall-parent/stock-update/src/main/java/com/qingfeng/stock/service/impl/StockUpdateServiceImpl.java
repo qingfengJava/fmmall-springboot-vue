@@ -1,10 +1,12 @@
 package com.qingfeng.stock.service.impl;
 
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.qingfeng.fm.entity.ProductSku;
 import com.qingfeng.stock.dao.ProductSkuMapper;
 import com.qingfeng.stock.service.StockUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -20,6 +22,8 @@ public class StockUpdateServiceImpl implements StockUpdateService {
     private ProductSkuMapper productSkuMapper;
 
     @Override
+    @Transactional
+    @LcnTransaction
     public int updateStock(List<ProductSku> skus) {
         int count = 1;
         for (ProductSku productSku : skus) {

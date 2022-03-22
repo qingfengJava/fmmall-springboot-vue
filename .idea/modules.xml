@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/api-user-regist/api-user-regist.iml" filepath="$PROJECT_DIR$/fmmall-parent/api-user-regist/api-user-regist.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/beans/beans.iml" filepath="$PROJECT_DIR$/fmmall-parent/beans/beans.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/common/common.iml" filepath="$PROJECT_DIR$/fmmall-parent/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/config-server/config-server.iml" filepath="$PROJECT_DIR$/fmmall-parent/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/fmmall-parent/eureka-service/eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/fmmall-parent.iml" filepath="$PROJECT_DIR$/fmmall-parent/fmmall-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/mapper/mapper.iml" filepath="$PROJECT_DIR$/fmmall-parent/mapper/mapper.iml" />
@@ -23,6 +24,7 @@
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/shopcart-del/shopcart-del.iml" filepath="$PROJECT_DIR$/fmmall-parent/shopcart-del/shopcart-del.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/stock-query/stock-query.iml" filepath="$PROJECT_DIR$/fmmall-parent/stock-query/stock-query.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/stock-update/stock-update.iml" filepath="$PROJECT_DIR$/fmmall-parent/stock-update/stock-update.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fmmall-parent/tx-manager/tx-manager.iml" filepath="$PROJECT_DIR$/fmmall-parent/tx-manager/tx-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/user-check/user-check.iml" filepath="$PROJECT_DIR$/fmmall-parent/user-check/user-check.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/user-save/user-save.iml" filepath="$PROJECT_DIR$/fmmall-parent/user-save/user-save.iml" />
       <module fileurl="file://$PROJECT_DIR$/fmmall-parent/zipkin-server/zipkin-server.iml" filepath="$PROJECT_DIR$/fmmall-parent/zipkin-server/zipkin-server.iml" />
